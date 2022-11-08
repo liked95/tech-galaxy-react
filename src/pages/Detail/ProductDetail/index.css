@@ -1,0 +1,24 @@
+.thumbSlickProduct {
+    width: 240px;
+    margin: 0 auto;
+    margin-top: 15px;
+}
+
+.thumbSlickProduct .slick-slide {
+    padding: 5px;
+}
+
+.thumbSlickProduct  .slick-image-wrapper {
+    padding: 3px;
+    border: 1px solid #e0e0e0;
+}
+
+.thumbSlickProduct .slick-current .slick-image-wrapper {
+    border-color: #fb6e2e;
+}
+
+
+.slick-thumbnail-name {
+    font-size: 12px;
+    text-align: center;
+}
