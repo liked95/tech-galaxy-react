@@ -14,7 +14,7 @@ import PrivateRoutes from 'components/private/PrivateRoutes';
 
 function App() {
 
-
+  
   return (
     <div className="App">
       <Routes>

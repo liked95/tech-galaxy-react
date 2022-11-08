@@ -2,7 +2,7 @@ import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 
 export const cartApi = createApi({
     reducerPath: "cartApi",
-    baseQuery: fetchBaseQuery({ baseUrl: "http://localhost:3001" }),
+    baseQuery: fetchBaseQuery({ baseUrl: process.env.NODE_ENV == "development" ? "http://localhost:3001" : "https://tech-galaxy-react.herokuapp.com"}),
     endpoints: (builder) => ({
         getCart: builder.query({
             query: () => "/cart",
