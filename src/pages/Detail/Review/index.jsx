@@ -5,8 +5,7 @@ import UserComment from './UserComment';
 import { useDispatch } from 'react-redux';
 import { toggleWriteReview } from 'features/Products/product.slice';
 
-import { ToastContainer, toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
+
 
 
 function Review(props) {
@@ -20,7 +19,8 @@ function Review(props) {
     const handleOpenWriteReview = () => {
         dispatch(toggleWriteReview())
     }
-    const notify = () => toast(' Wow so easy!');
+   
+
 
     return (
         <div className="review">
@@ -55,21 +55,6 @@ function Review(props) {
                         </div>
                     </div>
 
-                    <button onClick={notify}>Notify!</button>
-
-                    <ToastContainer
-                        position="top-right"
-                        autoClose={1000}
-                        hideProgressBar={false}
-                        newestOnTop={false}
-                        closeOnClick
-                        rtl={false}
-                        pauseOnFocusLoss
-                        draggable
-                        pauseOnHover
-                        theme="light"
-                    />
-                    <ToastContainer />
 
                     <div className="review-right">
                         <div className="user-review-container">

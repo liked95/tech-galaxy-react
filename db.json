@@ -77,473 +77,53 @@
       },
       "reviews": [
         {
-          "reviewer": "son",
+          "reviewer": "ton",
           "date": "9/11/2022",
-          "time": "05:14 PM",
-          "rating": 5,
-          "content": "ngonnnn"
+          "time": "11:48 PM",
+          "rating": 4,
+          "content": "e, containing the first parameter that was passed to the thunk action creator when it was dispatched. This is useful for passing in values like item IDs that may be needed as part of the request. If you need to pass in multiple values, pass them together in an object when you dispatch the thunk, like dis"
         },
         {
-          "reviewer": "son",
+          "reviewer": "ton",
           "date": "9/11/2022",
-          "time": "05:14 PM",
-          "rating": 5,
-          "content": "ngonnnn"
-        },
-        {
-          "reviewer": "son",
-          "date": "9/11/2022",
-          "time": "05:14 PM",
-          "rating": 5,
-          "content": "ngonnnn"
+          "time": "11:46 PM",
+          "rating": 1,
+          "content": "Tun dsdfasda"
         },
         {
           "reviewer": "son",
           "date": "9/11/2022",
-          "time": "05:14 PM",
-          "rating": 5,
-          "content": "ngonnnn"
+          "time": "11:46 PM",
+          "rating": 3,
+          "content": "I look up to the sky"
         },
         {
           "reviewer": "son",
           "date": "9/11/2022",
-          "time": "05:10 PM",
-          "rating": 1,
-          "content": "cung duoc do"
+          "time": "11:45 PM",
+          "rating": 5,
+          "content": "I look up to the sky"
         },
         {
           "reviewer": "son",
           "date": "9/11/2022",
-          "time": "05:06 PM",
-          "rating": 2,
-          "content": "no way to die"
+          "time": "11:45 PM",
+          "rating": 1,
+          "content": "hay em oi"
         },
         {
           "reviewer": "son",
           "date": "9/11/2022",
-          "time": "05:05 PM",
-          "rating": 3,
-          "content": "K tin noi luon do"
+          "time": "11:44 PM",
+          "rating": 1,
+          "content": "an keo ko em"
         },
         {
           "reviewer": "son",
           "date": "9/11/2022",
-          "time": "04:54 PM",
-          "rating": 2,
-          "content": "hyy"
-        },
-        {
-          "reviewer": "son",
-          "date": "9/11/2022",
-          "time": "04:51 PM",
-          "rating": 2,
-          "content": "Thơm thịt thế nhở "
-        },
-        {
-          "reviewer": "Nguyen Thi Thuy An",
-          "date": "20-9-2021",
-          "time": "6:36AM",
-          "rating": 4,
-          "content": "Máy thiết kế cực kỳ tinh xảo, hệ điều hành cực mượt và chụp hình cực kỳ siêu nét"
-        },
-        {
-          "reviewer": "Bùi Thị Vương",
-          "date": "27-8-2021",
-          "time": "9:50PM",
-          "rating": 4,
-          "content": "Quá tệ sản phẩm kém chất lượng"
-        },
-        {
-          "reviewer": "Mai Văn Thủy",
-          "date": "6-8-2021",
-          "time": "1:14PM",
-          "rating": 4,
-          "content": "Máy thiết kế cực kỳ tinh xảo, hệ điều hành cực mượt và chụp hình cực kỳ siêu nét"
-        },
-        {
-          "reviewer": "Thanh Tuyền",
-          "date": "31-7-2021",
-          "time": "1:25AM",
-          "rating": 4,
-          "content": "Máy rất đẹp xứng đáng với đối tiền"
-        },
-        {
-          "reviewer": "Nguyễn Như Thành",
-          "date": "23-6-2021",
-          "time": "2:37PM",
-          "rating": 1,
-          "content": "Máy đẹp quá đi mất thôi"
-        },
-        {
-          "reviewer": "Nguyen Thi Thuy An",
-          "date": "30-3-2021",
-          "time": "9:32PM",
-          "rating": 4,
-          "content": "May tốt"
-        },
-        {
-          "reviewer": "Nguyễn Thị Nhàn",
-          "date": "25-3-2021",
-          "time": "12:8PM",
-          "rating": 4,
-          "content": "Mua ngay máy lô màn obe bị lỗi tần số quét LTPO, cứ coi clip facebook bị nhấp nháy rất khó chịu vì màn ko hoạt động LTPO,test thử máy khác máy bị máy ko, ra đổi máy khác thì ko dc."
-        },
-        {
-          "reviewer": "Bùi Thị Vương",
-          "date": "3-3-2021",
-          "time": "7:5PM",
-          "rating": 2,
-          "content": "Máy rất đẹp xứng đáng với đối tiền"
-        },
-        {
-          "reviewer": "Thu",
-          "date": "31-2-2021",
-          "time": "5:20PM",
-          "rating": 1,
-          "content": "Máy đẹp quá đi mất thôi"
-        },
-        {
-          "reviewer": "Nguyen Thi Thuy An",
-          "date": "21-2-2021",
-          "time": "4:42AM",
-          "rating": 3,
-          "content": "Mua ngay máy lô màn obe bị lỗi tần số quét LTPO, cứ coi clip facebook bị nhấp nháy rất khó chịu vì màn ko hoạt động LTPO,test thử máy khác máy bị máy ko, ra đổi máy khác thì ko dc."
-        },
-        {
-          "reviewer": "NgMinh",
-          "date": "13-2-2021",
-          "time": "2:43PM",
-          "rating": 2,
-          "content": "Quá tệ sản phẩm kém chất lượng"
-        },
-        {
-          "reviewer": "Huỳnh Phương Bình",
-          "date": "11-2-2021",
-          "time": "7:2AM",
-          "rating": 3,
-          "content": "Máy rất đẹp xứng đáng với đối tiền"
-        },
-        {
-          "reviewer": "Nguyễn Thị Tiến",
-          "date": "3-2-2021",
-          "time": "11:8AM",
-          "rating": 2,
-          "content": "San pham nay rat tot"
-        },
-        {
-          "reviewer": "Hà Lợi",
-          "date": "26-1-2021",
-          "time": "3:57PM",
-          "rating": 4,
-          "content": "Đt mua đc 2 tháng mấy, lần thứ 1 đang xài thì bị sọc màn hình gửi đi bảo hành về bị hở viền trên phần giáp với phần loa . Lần 2 gửi đi nhận về thì ko khắc phục đc lỗi . Lần 3 là hôm nay nhận máy cũng vậy vẫn ko khắc phục được lỗi. Lần thứ 4 gửi đi thì đang đợi phản hồi về tình trạng máy..."
-        },
-        {
-          "reviewer": "Nguyễn Thị Nhàn",
-          "date": "15-1-2021",
-          "time": "4:1PM",
-          "rating": 2,
-          "content": "Iphone thì không còn gì để chê rồi, thế giới di động phục vụ rất tốt, nhân viên thân thiện, nhiệt tình, dễ thương, TechGalaxy luôn là ưu tiên hàng đầu của mình khi mua đồ công nghệ"
-        },
-        {
-          "reviewer": "Thu",
-          "date": "10-1-2021",
-          "time": "10:49PM",
-          "rating": 2,
-          "content": "B cho mình hỏi giá nay bao gồm sạc voi tai nghe chưa hay mua sạc riêng vậy bạn, minh Thấy ở trong hộp chỉ co dây sạc nhanh thôi à"
-        },
-        {
-          "reviewer": "Thu",
-          "date": "2-1-2021",
-          "time": "3:49AM",
-          "rating": 4,
-          "content": "Rất tốt"
-        },
-        {
-          "reviewer": "TRAN VAN NGHIA",
-          "date": "9-12-2020",
-          "time": "9:18AM",
-          "rating": 4,
-          "content": "Rất tốt"
-        },
-        {
-          "reviewer": "Chị Trang",
-          "date": "3-12-2020",
-          "time": "1:9PM",
-          "rating": 1,
-          "content": "Iphone thì không còn gì để chê rồi, thế giới di động phục vụ rất tốt, nhân viên thân thiện, nhiệt tình, dễ thương, TechGalaxy luôn là ưu tiên hàng đầu của mình khi mua đồ công nghệ"
-        },
-        {
-          "reviewer": "Thu",
-          "date": "7-11-2020",
-          "time": "2:40PM",
+          "time": "11:43 PM",
           "rating": 5,
-          "content": "Máy đẹp quá đi mất thôi"
-        },
-        {
-          "reviewer": "HUYỀN",
-          "date": "28-9-2020",
-          "time": "5:3PM",
-          "rating": 4,
-          "content": "Máy rất đẹp xứng đáng với đối tiền"
-        },
-        {
-          "reviewer": "Hiếu",
-          "date": "22-9-2020",
-          "time": "6:45AM",
-          "rating": 5,
-          "content": "Mua ngay máy lô màn obe bị lỗi tần số quét LTPO, cứ coi clip facebook bị nhấp nháy rất khó chịu vì màn ko hoạt động LTPO,test thử máy khác máy bị máy ko, ra đổi máy khác thì ko dc."
-        },
-        {
-          "reviewer": "NgMinh",
-          "date": "1-9-2020",
-          "time": "2:59PM",
-          "rating": 5,
-          "content": "B cho mình hỏi giá nay bao gồm sạc voi tai nghe chưa hay mua sạc riêng vậy bạn, minh Thấy ở trong hộp chỉ co dây sạc nhanh thôi à"
-        },
-        {
-          "reviewer": "Thu",
-          "date": "3-8-2020",
-          "time": "2:37AM",
-          "rating": 3,
-          "content": "Hài lòng về sản phẩm và chất lượng phục vụ"
-        },
-        {
-          "reviewer": "Long",
-          "date": "20-7-2020",
-          "time": "12:7PM",
-          "rating": 3,
-          "content": "Về tổng thể thì khá ok, chỉ có một điểm trừ là màn hình tai thỏ, mình thấy dù hiệu năng có tốt đến mức nào thì cái nhìn đầu tiên với màn hình tai thỏ thì đã có ấn tượng không hài hoà, không đẹp chút nào, nhìn như màn hình bị cắt xén đi bớt, cho nên nói về thiết kế thì iPhone vẫn còn 1 hạn chế là màn hình tai thỏ. Mong rằng dòng máy tiếp theo iPhone sẽ trang bị một màn hình nốt ruồi thì mới thật sự hoàn hảo, xứng đáng với biểu tượng thương hiệu dtdd cao cấp."
-        },
-        {
-          "reviewer": "Mai Văn Thủy",
-          "date": "31-6-2020",
-          "time": "9:3PM",
-          "rating": 1,
-          "content": "Máy thiết kế cực kì tinh xảo , hệ điều hành cực mượt và đặc biệt chụp hình siêu nét"
-        },
-        {
-          "reviewer": "Đức Thắng",
-          "date": "27-6-2020",
-          "time": "8:43AM",
-          "rating": 4,
-          "content": "Máy thiết kế rất tinh sảo,hệ điều hành mượt,chụp hình siêu nét"
-        },
-        {
-          "reviewer": "Long",
-          "date": "17-6-2020",
-          "time": "10:4AM",
-          "rating": 3,
-          "content": "Mua ngay máy lô màn obe bị lỗi tần số quét LTPO, cứ coi clip facebook bị nhấp nháy rất khó chịu vì màn ko hoạt động LTPO,test thử máy khác máy bị máy ko, ra đổi máy khác thì ko dc."
-        },
-        {
-          "reviewer": "Linh",
-          "date": "16-6-2020",
-          "time": "11:33AM",
-          "rating": 4,
-          "content": "Máy thiết kế cực kỳ tinh xảo,hệ điều hành cực mượt và đặc biệt chụp hình rất đẹp và nét, tôi rất thích"
-        },
-        {
-          "reviewer": "HÀ",
-          "date": "2-6-2020",
-          "time": "10:3PM",
-          "rating": 5,
-          "content": "Sản phẩm rất tốt màn hình sắc nét mượt mà pin trâu. Hệ điều hành ổn định không lỗi vặt gì."
-        },
-        {
-          "reviewer": "Thanh Tuyền",
-          "date": "30-5-2020",
-          "time": "1:34PM",
-          "rating": 1,
-          "content": "Máy thì tốt . Nhưng khi bị lỗi đi bảo hành thì lại xử lý rất lâu và tốn thời gian. Nhưng kết quả là k được đổi và nhận lại máy lỗi về sử dụng tiếp. Rất không hài lòng về chế độ bảo hành. Đùn đẩy qua lại cho nhau và k có trách nhiệm. Rất cần được phản hồi. Cảm ơn ạ"
-        },
-        {
-          "reviewer": "Mai Văn Thủy",
-          "date": "12-5-2020",
-          "time": "7:29PM",
-          "rating": 4,
-          "content": "Đt mua đc 2 tháng mấy, lần thứ 1 đang xài thì bị sọc màn hình gửi đi bảo hành về bị hở viền trên phần giáp với phần loa . Lần 2 gửi đi nhận về thì ko khắc phục đc lỗi . Lần 3 là hôm nay nhận máy cũng vậy vẫn ko khắc phục được lỗi. Lần thứ 4 gửi đi thì đang đợi phản hồi về tình trạng máy..."
-        },
-        {
-          "reviewer": "Hiếu",
-          "date": "11-4-2020",
-          "time": "10:47PM",
-          "rating": 4,
-          "content": "Máy thiết kế cực kỳ tinh xảo, hệ điều hành cực mượt và chụp hình cực kỳ siêu nét"
-        },
-        {
-          "reviewer": "Nguyễn Như Thành",
-          "date": "6-3-2020",
-          "time": "10:35PM",
-          "rating": 1,
-          "content": "B cho mình hỏi giá nay bao gồm sạc voi tai nghe chưa hay mua sạc riêng vậy bạn, minh Thấy ở trong hộp chỉ co dây sạc nhanh thôi à"
-        },
-        {
-          "reviewer": "CHI",
-          "date": "10-2-2020",
-          "time": "4:45PM",
-          "rating": 2,
-          "content": "Máy rất đẹp xứng đáng với đối tiền"
-        },
-        {
-          "reviewer": "Hà Lợi",
-          "date": "8-2-2020",
-          "time": "10:29PM",
-          "rating": 2,
-          "content": "San pham nay rat tot"
-        },
-        {
-          "reviewer": "Minh",
-          "date": "6-1-2020",
-          "time": "7:34AM",
-          "rating": 3,
-          "content": "Máy thiết kế cực kỳ tinh xảo, hệ điều hành êm ái và chụp hình sắc nét"
-        },
-        {
-          "reviewer": "CHI",
-          "date": "5-1-2020",
-          "time": "9:58PM",
-          "rating": 2,
-          "content": "B cho mình hỏi giá nay bao gồm sạc voi tai nghe chưa hay mua sạc riêng vậy bạn, minh Thấy ở trong hộp chỉ co dây sạc nhanh thôi à"
-        },
-        {
-          "reviewer": "HÀ",
-          "date": "4-1-2020",
-          "time": "2:8AM",
-          "rating": 1,
-          "content": "Mua về sài chỉ lên mạng k kung hư.. Bảo hành thì hứa hẹn 5-15 ngày mà hứa cả tháng k thấy. Gọi là hẹn"
-        },
-        {
-          "reviewer": "Vũ Thị Hồng Minh",
-          "date": "21-11-2019",
-          "time": "11:9AM",
-          "rating": 4,
-          "content": "Máy thiết kế cực kỳ tinh xảo, hệ điều hành cực mượt và chụp hình cực kỳ siêu nét"
-        },
-        {
-          "reviewer": "Nguyễn Thị Nhàn",
-          "date": "4-11-2019",
-          "time": "6:6AM",
-          "rating": 4,
-          "content": "Máy thiết kế rất tinh sảo,hệ điều hành mượt,chụp hình siêu nét"
-        },
-        {
-          "reviewer": "Võ Thị Liên",
-          "date": "23-10-2019",
-          "time": "2:24AM",
-          "rating": 4,
-          "content": "B cho mình hỏi giá nay bao gồm sạc voi tai nghe chưa hay mua sạc riêng vậy bạn, minh Thấy ở trong hộp chỉ co dây sạc nhanh thôi à"
-        },
-        {
-          "reviewer": "Nguyễn Văn Vũ",
-          "date": "22-10-2019",
-          "time": "3:27AM",
-          "rating": 3,
-          "content": "Về tổng thể thì khá ok, chỉ có một điểm trừ là màn hình tai thỏ, mình thấy dù hiệu năng có tốt đến mức nào thì cái nhìn đầu tiên với màn hình tai thỏ thì đã có ấn tượng không hài hoà, không đẹp chút nào, nhìn như màn hình bị cắt xén đi bớt, cho nên nói về thiết kế thì iPhone vẫn còn 1 hạn chế là màn hình tai thỏ. Mong rằng dòng máy tiếp theo iPhone sẽ trang bị một màn hình nốt ruồi thì mới thật sự hoàn hảo, xứng đáng với biểu tượng thương hiệu dtdd cao cấp."
-        },
-        {
-          "reviewer": "Lê Ngọc Huy",
-          "date": "6-10-2019",
-          "time": "9:13PM",
-          "rating": 2,
-          "content": "Đt mua đc 2 tháng mấy, lần thứ 1 đang xài thì bị sọc màn hình gửi đi bảo hành về bị hở viền trên phần giáp với phần loa . Lần 2 gửi đi nhận về thì ko khắc phục đc lỗi . Lần 3 là hôm nay nhận máy cũng vậy vẫn ko khắc phục được lỗi. Lần thứ 4 gửi đi thì đang đợi phản hồi về tình trạng máy..."
-        },
-        {
-          "reviewer": "Thanh Tuyền",
-          "date": "5-10-2019",
-          "time": "6:12PM",
-          "rating": 2,
-          "content": "Máy kém chất lượng hơn 3 tháng sử dụng thì máy lỗi và không được bảo hành"
-        },
-        {
-          "reviewer": "CHI",
-          "date": "1-10-2019",
-          "time": "3:27PM",
-          "rating": 5,
-          "content": "Máy thiết kế cực kỳ tinh xảo,hệ điều hành cực mượt và đặc biệt chụp hình rất đẹp và nét, tôi rất thích"
-        },
-        {
-          "reviewer": "Nguyễn Thị Nhàn",
-          "date": "20-9-2019",
-          "time": "9:2AM",
-          "rating": 2,
-          "content": "Máy rất đẹp xứng đáng với đối tiền"
-        },
-        {
-          "reviewer": "Nguyễn Thị Nhàn",
-          "date": "1-9-2019",
-          "time": "2:15AM",
-          "rating": 4,
-          "content": "Máy kém chất lượng hơn 3 tháng sử dụng thì máy lỗi và không được bảo hành"
-        },
-        {
-          "reviewer": "Dai Thu",
-          "date": "19-8-2019",
-          "time": "1:33PM",
-          "rating": 1,
-          "content": "Máy thiết kế cực kỳ tinh xảo, hệ điều hành êm ái và chụp hình sắc nét"
-        },
-        {
-          "reviewer": "Nông Đức Mạnh",
-          "date": "24-7-2019",
-          "time": "6:53PM",
-          "rating": 1,
-          "content": "Mua về sài chỉ lên mạng k kung hư.. Bảo hành thì hứa hẹn 5-15 ngày mà hứa cả tháng k thấy. Gọi là hẹn"
-        },
-        {
-          "reviewer": "HÀ",
-          "date": "29-6-2019",
-          "time": "4:15PM",
-          "rating": 3,
-          "content": "Rất tốt"
-        },
-        {
-          "reviewer": "Bùi Thị Vương",
-          "date": "10-6-2019",
-          "time": "10:10AM",
-          "rating": 1,
-          "content": "Mua ngay máy lô màn obe bị lỗi tần số quét LTPO, cứ coi clip facebook bị nhấp nháy rất khó chịu vì màn ko hoạt động LTPO,test thử máy khác máy bị máy ko, ra đổi máy khác thì ko dc."
-        },
-        {
-          "reviewer": "Dai Thu",
-          "date": "1-6-2019",
-          "time": "8:51PM",
-          "rating": 5,
-          "content": "Iphone thì không còn gì để chê rồi, thế giới di động phục vụ rất tốt, nhân viên thân thiện, nhiệt tình, dễ thương, TechGalaxy luôn là ưu tiên hàng đầu của mình khi mua đồ công nghệ"
-        },
-        {
-          "reviewer": "THẢO",
-          "date": "31-5-2019",
-          "time": "12:31PM",
-          "rating": 2,
-          "content": "Uy tín"
-        },
-        {
-          "reviewer": "Hà Lợi",
-          "date": "26-5-2019",
-          "time": "7:12PM",
-          "rating": 4,
-          "content": "Hài lòng về sản phẩm và chất lượng phục vụ"
-        },
-        {
-          "reviewer": "Mai Văn Thủy",
-          "date": "22-5-2019",
-          "time": "6:51PM",
-          "rating": 2,
-          "content": "Dùng tốt, khoảng tầm 4,5 ngày gần đây pin tụt nhanh như uống nước lã. 1p mất hết 2% pin. Mong ktv hổ trợ kiểm tra máy e ạ. Chứ kiểu này vừa hết 30 ngày đổi máy cái bị lỗi. Hơi thất vọng"
-        },
-        {
-          "reviewer": "HUYỀN",
-          "date": "30-4-2019",
-          "time": "9:53PM",
-          "rating": 2,
-          "content": "Uy tín"
-        },
-        {
-          "reviewer": "TRAN VAN NGHIA",
-          "date": "12-2-2019",
-          "time": "3:57PM",
-          "rating": 2,
-          "content": "Rất tốt"
+          "content": "Ngon chim the nhi"
         },
         {
           "reviewer": "THẢO",
@@ -12595,9 +12175,9 @@
     {
       "productID": 1,
       "userId": 1,
-      "alterOption": "128GB",
+      "alterOption": 0,
       "color": "Vàng đồng",
-      "count": 2,
+      "count": 3,
       "name": "iPhone 13 Pro Max",
       "price": 28290000,
       "oldPrice": 33900000,
@@ -12617,6 +12197,19 @@
       "image": "iphone-13-pro-sierra-blue-200x200.jpg",
       "checked": true,
       "id": 21
+    },
+    {
+      "productID": 1,
+      "userId": 1,
+      "alterOption": 0,
+      "color": "Xanh lá",
+      "count": 5,
+      "name": "iPhone 13 Pro Max",
+      "price": 28290000,
+      "oldPrice": 33900000,
+      "image": "xanh-la-iphone.jpg",
+      "checked": true,
+      "id": 22
     }
   ],
   "history": [
