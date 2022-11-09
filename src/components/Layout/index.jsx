@@ -5,6 +5,7 @@ import Footer from "components/Footer/index";
 import Compare from "components/Compare/index";
 import SideNav from "components/SideNav/index";
 import Backdrop from "components/Backdrop/index";
+import WriteReview from "pages/Detail/Review/WriteReview";
 
 
 function Layout() {
@@ -14,8 +15,9 @@ function Layout() {
       <Outlet />
       <Footer />
       <Compare />
-      <SideNav/>
+      <SideNav />
       <Backdrop />
+      <WriteReview />
     </>
   );
 }

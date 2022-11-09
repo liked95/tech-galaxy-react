@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useEffect} from 'react'
 import { useLocation } from 'react-router-dom'
 import DetailHeading from './DetailHeading/index'
 import queryString from 'query-string'
@@ -20,7 +20,9 @@ function Detail() {
     const params = queryString.parse(location.search)
     const id = +params.id
 
-    scrollToTop()
+    useEffect(() => {
+        scrollToTop()
+    }, [id]);
     
     
     const product = products.find(p => p.id == id)

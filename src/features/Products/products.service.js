@@ -7,9 +7,18 @@ export const productApi = createApi({
         getProducts: builder.query({
             query: () => "/products",
         }),
+        
+        updateReview: builder.mutation({
+            query: (data) => ({
+                url: `/products/${data.id}`,
+                method: "PUT",
+                body: data,
+            })
+        }),
+
        
     }),
 });
 
 
-export const {useGetProductsQuery} = productApi
+export const {useGetProductsQuery, useUpdateReviewMutation} = productApi
