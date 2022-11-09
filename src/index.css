@@ -1152,40 +1152,23 @@ footer p {
 
 
 
-/* Owl Carousel 2 */
-
-.owl-carousel .owl-nav button {
-    background: rgba(255, 255, 255, .9) !important;
-    height: 60px;
-    width: 30px;
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    z-index: 2;
-    border: 1px solid #e0e0e0 !important;
-    border-radius: 4px;
-    opacity: 0.3;
+/* slick track */
+.slick-track
+{
+    display: flex !important;
 }
 
-.owl-carousel .owl-nav button:hover {
-    opacity: 0.6;
+.slick-slide
+{
+    height: inherit !important;
 }
 
-.owl-carousel .owl-nav button.owl-next {
-    right: 0;
-    box-shadow: -6px 0 4px rgba(0, 0, 0, .05), -4px 0 4px rgba(0, 0, 0, .09);
+.slick-slide > div {
+    height: 100%;
 }
 
-.owl-carousel .owl-nav button.owl-prev {
-    left: 0;
-    box-shadow: 6px 0 4px rgba(0, 0, 0, .05), 4px 0 4px rgba(0, 0, 0, .09);
-}
-
-.owl-carousel .owl-nav button span {
-    color: #666;
-    font-size: 60px;
-    line-height: 40px;
-    font-weight: lighter;
+.slick-slide .product-card {
+    height: 100%;
 }
 
 

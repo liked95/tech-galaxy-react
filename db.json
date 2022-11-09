@@ -12528,32 +12528,6 @@
       "image": "samsung-galaxy-z-fold-3-green-1-200x200.jpg",
       "checked": false,
       "id": 18
-    },
-    {
-      "productID": 5,
-      "userId": 1,
-      "alterOption": "128GB",
-      "color": "Hồng",
-      "count": 2,
-      "name": "iPhone 13 mini",
-      "price": 18490000,
-      "oldPrice": 21990000,
-      "image": "iphone-13-mini-pink-1-200x200.jpg",
-      "checked": true,
-      "id": 19
-    },
-    {
-      "productID": 8,
-      "userId": 1,
-      "alterOption": "64GB",
-      "color": "Đỏ",
-      "count": 2,
-      "name": "iPhone SE (2022)",
-      "price": 12490000,
-      "oldPrice": 12990000,
-      "image": "iphone-se-red-200x200.jpg",
-      "checked": true,
-      "id": 20
     }
   ],
   "history": [

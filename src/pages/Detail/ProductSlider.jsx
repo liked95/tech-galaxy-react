@@ -1,5 +1,5 @@
 import ProductItem from 'components/ProductItem/index';
-import React, { useState, } from 'react';
+import React from 'react';
 import Slider from 'react-slick';
 
 function ProductSlider({ products }) {
