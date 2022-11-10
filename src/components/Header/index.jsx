@@ -22,7 +22,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { useGetCartQuery } from "features/Cart/cart.service";
 import { useGetHistoryQuery } from "features/History/history.service";
 import { formatMoney } from "utils/index";
-import {openSideNav} from "../SideNav/sideNav.slice"
+import {openSideNav, turnBackDropOn} from "../SideNav/sideNav.slice"
 
 function Header() {
   const dispatch = useDispatch()
@@ -66,6 +66,7 @@ function Header() {
 
   const handleOpenSideNav = () => {
     dispatch(openSideNav())
+    dispatch(turnBackDropOn())
     console.log("click");
 
   }

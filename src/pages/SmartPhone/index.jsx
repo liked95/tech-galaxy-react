@@ -13,7 +13,7 @@ import Sort from './Sort';
 import { avgRating } from 'components/ProductItem/index';
 import { useDispatch, useSelector } from 'react-redux';
 import { useGetProductsQuery } from 'features/Products/products.service';
-import { openSideNav } from 'components/SideNav/sideNav.slice';
+import { openSideNav, toggleBackdrop, toggleFilter } from 'components/SideNav/sideNav.slice';
 
 function SmartPhone() {
   const location = useLocation()
@@ -21,11 +21,11 @@ function SmartPhone() {
   const dispatch = useDispatch()
   useGetProductsQuery()
 
-  const [active, setActive] = useState(false)
+  const active = useSelector(state=>state.sideNav.isFilterSideNavActive)
 
   const handleToggleSideFilter = () => {
-    setActive(!active)
-    
+    dispatch(toggleFilter())
+    dispatch(toggleBackdrop())
   }
 
   let products = useSelector(state => state.productList.products)

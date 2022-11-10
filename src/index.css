@@ -2911,9 +2911,9 @@ tbody p {
         transform: rotate(90deg);
     }
 
-    .sub-menu {
+    /* .sub-menu {
         display: none;
-    }
+    } */
 
     .credential-sidebar {
         height: 100%

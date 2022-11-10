@@ -27,7 +27,7 @@ function AllReviews() {
   return (
     <Modal show={show} onHide={handleClose}>
       <Modal.Header closeButton>
-        <Modal.Title>Tất cả đánh giá</Modal.Title>
+        <Modal.Title>Tất cả đánh giá cho {product.name}</Modal.Title>
       </Modal.Header>
       <Modal.Body className="row">
         <div className='user-review-container'>
