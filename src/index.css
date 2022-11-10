@@ -2671,7 +2671,9 @@ tbody p {
     object-fit: cover;
 }
 
-
+.toast-success {
+    top: 30%;
+}
 
 /* @import url("style.css"); */
 

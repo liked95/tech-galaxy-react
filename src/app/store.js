@@ -23,7 +23,7 @@ const store = configureStore({
         [historyApi.reducerPath]: historyApi.reducer,
         history: historyReducer,
 
-        sideNav: sideNavReducer
+        sideNav: sideNavReducer,
     },
 
     middleware: (getDefaultMiddleware) =>

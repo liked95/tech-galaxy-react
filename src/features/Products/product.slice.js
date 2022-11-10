@@ -18,12 +18,12 @@ const productSlice = createSlice({
   },
   extraReducers: (builder) => {
     builder.addMatcher(productApi.endpoints.getProducts.matchFulfilled, (state, action) => {
-      console.log(action);
+      // console.log(action);
       state.products = action.payload
     });
 
     builder.addMatcher(productApi.endpoints.updateReview.matchFulfilled, (state, action) => {
-      console.log(action)
+      // console.log(action)
       let idx = state.products.findIndex(product => product.id == action.payload.id)
       state.products[idx] = action.payload
     });

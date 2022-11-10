@@ -7,95 +7,122 @@ import { useDispatch, useSelector } from 'react-redux';
 import { useLocation } from 'react-router-dom';
 import queryString from 'query-string'
 
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 function WriteReview() {
-    const [updateReview] = useUpdateReviewMutation()
-    const dispatch = useDispatch()
-    const show = useSelector(state => state.productList.isWriteReviewOpen)
-
-    const auth = useSelector(state => state.userList.auth)
 
 
-    const [input, setInput] = useState("")
-    const [checked, setChecked] = useState(5)
+  const [updateProduct] = useUpdateReviewMutation()
+  const dispatch = useDispatch()
+  const show = useSelector(state => state.productList.isWriteReviewOpen)
+
+  const auth = useSelector(state => state.userList.auth)
 
 
-    const location = useLocation()
-    const params = queryString.parse(location.search)
-    const id = +params.id
+  const [input, setInput] = useState("")
+  const [checked, setChecked] = useState(5)
 
-    useGetProductsQuery()
-    const products = useSelector(state => state.productList.products)
-    let product = products.find(p => p.id == id)
-    console.log(product);
 
-    const handleClose = () => {
-        dispatch(toggleWriteReview())
+  const location = useLocation()
+  const params = queryString.parse(location.search)
+  const id = +params.id
+
+  useGetProductsQuery()
+  const products = useSelector(state => state.productList.products)
+  let product = products.find(p => p.id == id)
+
+
+  const handleClose = () => {
+    dispatch(toggleWriteReview())
+  }
+
+
+  const notify = () => {
+    toast.success("Success Notification !", {
+      position: toast.POSITION.BOTTOM_RIGHT
+    });
+    
+  };
+
+  const handleSubmitReview = () => {
+    if (!input.trim()) {
+      alert("Nội dung đánh giá không được để trống!")
+      return
+    }
+    const review = {
+      reviewer: auth.username,
+      date: new Date().toLocaleDateString("vi-VN"),
+      time: new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }),
+      rating: checked,
+      content: input,
     }
 
-    const handleSubmitReview = () => {
-        if (!input.trim()) {
-            alert("Nội dung đánh giá không được để trống!")
-            return
-        }
-        const review = {
-            reviewer: auth.username,
-            date: new Date().toLocaleDateString("vi-VN"),
-            time: new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }),
-            rating: checked,
-            content: input,
-        }
+    // tao review moi
+    const updatedReviews = product.reviews.slice()
+    updatedReviews.unshift(review)
+    const updatedProduct = { ...product, reviews: updatedReviews }
 
-        // tao review moi
-        const updateReviews = product.reviews.slice()
-        updateReviews.unshift(review)
-        product = {...product, reviews: updateReviews}
 
-        alert("Cảm ơn bạn đã thêm đánh giá!")
-        dispatch(toggleWriteReview())
-        dispatch(updateReview(product))
-    }
 
-    return (
-        <Modal show={show} onHide={handleClose}>
-            <Modal.Header closeButton>
-                <Modal.Title>Thêm đánh giá cho sản phẩm</Modal.Title>
-            </Modal.Header>
-            <Modal.Body className="row">
-                <div className="col-lg-3">
-                    <div className="rating-button-container">
-                        {[5, 4, 3, 2, 1].map(star => (
-                            <div key={star}>
-                                <input
-                                    type="radio"
-                                    name="rating-checkbox"
-                                    value={star}
-                                    id={`star-${star}`}
-                                    checked={checked == star}
-                                    onChange={e => setChecked(+e.target.value)}
+    updateProduct(updatedProduct)
+    toast.success("Success Notification !", {
+      position: toast.POSITION.BOTTOM_RIGHT
+    });
+    
+    dispatch(toggleWriteReview())
+  }
 
-                                />
-                                <label htmlFor={`star-${star}`}>
-                                    {star} <i className="fa-solid fa-star"></i>
-                                </label>
-                            </div>
-                        ))}
 
-                    </div>
-                </div>
 
-                <div className="col-lg-9 review-input">
-                    <textarea placeholder="Mời bạn chia sẻ thêm một số cảm nhận về sản phẩm ..."
-                        onChange={e => setInput(e.target.value)} value={input}></textarea>
-                </div>
-            </Modal.Body>
+  return (
+    <Modal show={show} onHide={handleClose}>
+      <Modal.Header closeButton>
+        <Modal.Title>Thêm đánh giá cho sản phẩm</Modal.Title>
+      </Modal.Header>
+      <Modal.Body className="row">
+        <div className="col-lg-3">
+          <div className="rating-button-container">
+            {[5, 4, 3, 2, 1].map(star => (
+              <div key={star}>
+                <input
+                  type="radio"
+                  name="rating-checkbox"
+                  value={star}
+                  id={`star-${star}`}
+                  checked={checked == star}
+                  onChange={e => setChecked(+e.target.value)}
 
-            <Modal.Footer>
-                <button type="button" className="btn btn-secondary" onClick={handleSubmitReview}>Gửi</button>
-                <button type="button" className="btn btn-secondary" onClick={handleClose}>Đóng</button>
-            </Modal.Footer>
-        </Modal>
+                />
+                <label htmlFor={`star-${star}`}>
+                  {star} <i className="fa-solid fa-star"></i>
+                </label>
+              </div>
+            ))}
 
-    )
+          </div>
+        </div>
+
+        <div className="col-lg-9 review-input">
+          <textarea placeholder="Mời bạn chia sẻ thêm một số cảm nhận về sản phẩm ..."
+            onChange={e => setInput(e.target.value)} value={input}></textarea>
+        </div>
+      </Modal.Body>
+      <button onClick={notify}>Notify!</button>
+      <ToastContainer
+        className="toast-success"
+      />
+
+
+      <Modal.Footer>
+        <button type="button" className="btn btn-primary" onClick={handleSubmitReview}>Gửi đánh giá</button>
+        <button type="button" className="btn btn-secondary" onClick={handleClose}>Đóng</button>
+      </Modal.Footer>
+    </Modal>
+
+
+
+  )
 }
 
 export default WriteReview

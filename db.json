@@ -77,67 +77,18 @@
       },
       "reviews": [
         {
-          "reviewer": "son",
-          "date": "9/11/2022",
-          "time": "05:14 PM",
-          "rating": 5,
-          "content": "ngonnnn"
-        },
-        {
-          "reviewer": "son",
-          "date": "9/11/2022",
-          "time": "05:14 PM",
-          "rating": 5,
-          "content": "ngonnnn"
-        },
-        {
-          "reviewer": "son",
-          "date": "9/11/2022",
-          "time": "05:14 PM",
-          "rating": 5,
-          "content": "ngonnnn"
-        },
-        {
-          "reviewer": "son",
-          "date": "9/11/2022",
-          "time": "05:14 PM",
-          "rating": 5,
-          "content": "ngonnnn"
-        },
-        {
-          "reviewer": "son",
-          "date": "9/11/2022",
-          "time": "05:10 PM",
+          "reviewer": "ton",
+          "date": "10/11/2022",
+          "time": "12:06 AM",
           "rating": 1,
-          "content": "cung duoc do"
+          "content": "dfadsfa"
         },
         {
-          "reviewer": "son",
-          "date": "9/11/2022",
-          "time": "05:06 PM",
-          "rating": 2,
-          "content": "no way to die"
-        },
-        {
-          "reviewer": "son",
-          "date": "9/11/2022",
-          "time": "05:05 PM",
-          "rating": 3,
-          "content": "K tin noi luon do"
-        },
-        {
-          "reviewer": "son",
-          "date": "9/11/2022",
-          "time": "04:54 PM",
-          "rating": 2,
-          "content": "hyy"
-        },
-        {
-          "reviewer": "son",
-          "date": "9/11/2022",
-          "time": "04:51 PM",
-          "rating": 2,
-          "content": "Thơm thịt thế nhở "
+          "reviewer": "ton",
+          "date": "10/11/2022",
+          "time": "12:05 AM",
+          "rating": 5,
+          "content": "dddd"
         },
         {
           "reviewer": "Nguyen Thi Thuy An",
@@ -12617,6 +12568,19 @@
       "image": "iphone-13-pro-sierra-blue-200x200.jpg",
       "checked": true,
       "id": 21
+    },
+    {
+      "productID": 1,
+      "userId": 1,
+      "alterOption": "128GB",
+      "color": "Xanh lá",
+      "count": 2,
+      "name": "iPhone 13 Pro Max",
+      "price": 28290000,
+      "oldPrice": 33900000,
+      "image": "xanh-la-iphone.jpg",
+      "checked": true,
+      "id": 22
     }
   ],
   "history": [
