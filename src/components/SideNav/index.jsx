@@ -31,9 +31,10 @@ function SideNav() {
 
             <ul className="side-menu">
 
-                <SmartphoneMenu />
-                <TabletMenu />
-                <LaptopMenu />
+                <SmartphoneMenu category={"Điện thoại"}/>
+                <SmartphoneMenu category={"Máy tính bảng"}/>
+                <SmartphoneMenu category={"Laptop"}/>
+               
                 {/* 
 
                 <li className="menu-item">

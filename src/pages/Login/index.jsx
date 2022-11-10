@@ -2,10 +2,14 @@ import { useGetUsersQuery } from 'features/Users/users.service'
 import React, { useState, useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { Link, useNavigate } from 'react-router-dom'
-import {login} from 'features/Users/user.slice'
+import { login } from 'features/Users/user.slice'
+
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 
 function Login() {
-    
+
     useGetUsersQuery()
     const users = useSelector(state => state.userList.users)
 
@@ -41,9 +45,10 @@ function Login() {
             setUserNameAlert('Tên đăng nhập / mật khẩu không đúng')
             setPasswordAlert('Tên đăng nhập / mật khẩu không đúng')
         } else {
-            dispatch(login({username: user.name, id: user.id}))
+            dispatch(login({ username: user.name, id: user.id }))
             alert('Đăng nhập thành công')
             navigate("/")
+            notify()
         }
     }
 
@@ -54,6 +59,14 @@ function Login() {
     useEffect(() => {
         setPasswordAlert('')
     }, [password]);
+
+
+    const notify = () => {
+        toast.success("Success Notification !", {
+            position: toast.POSITION.BOTTOM_RIGHT
+        });
+
+    };
 
     return (
         <div className="login">

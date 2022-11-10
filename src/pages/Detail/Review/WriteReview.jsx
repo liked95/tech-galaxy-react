@@ -51,7 +51,7 @@ function WriteReview() {
       return
     }
     const review = {
-      reviewer: auth.username,
+      reviewer: auth?.username ?? "Ẩn danh",
       date: new Date().toLocaleDateString("vi-VN"),
       time: new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }),
       rating: checked,
@@ -66,6 +66,7 @@ function WriteReview() {
 
 
     updateProduct(updatedProduct)
+
     toast.success("Success Notification !", {
       position: toast.POSITION.BOTTOM_RIGHT
     });
@@ -108,7 +109,7 @@ function WriteReview() {
             onChange={e => setInput(e.target.value)} value={input}></textarea>
         </div>
       </Modal.Body>
-      <button onClick={notify}>Notify!</button>
+      {/* <button onClick={notify}>Notify!</button> */}
       <ToastContainer
         className="toast-success"
       />

@@ -3,7 +3,8 @@ import React from 'react'
 import { avgRating } from 'components/ProductItem/index';
 import UserComment from './UserComment';
 import { useDispatch } from 'react-redux';
-import { toggleWriteReview } from 'features/Products/product.slice';
+import { toggleAllReviews, toggleWriteReview } from 'features/Products/product.slice';
+import AllReviews from './AllReviews';
 
 
 
@@ -18,6 +19,10 @@ function Review(props) {
 
     const handleOpenWriteReview = () => {
         dispatch(toggleWriteReview())
+    }
+
+    const handleOpenAllReviews = () => {
+        dispatch(toggleAllReviews())
     }
    
 
@@ -55,21 +60,6 @@ function Review(props) {
                         </div>
                     </div>
 
-                    <button onClick={notify}>Notify!</button>
-
-                    <ToastContainer
-                        position="top-right"
-                        autoClose={1000}
-                        hideProgressBar={false}
-                        newestOnTop={false}
-                        closeOnClick
-                        rtl={false}
-                        pauseOnFocusLoss
-                        draggable
-                        pauseOnHover
-                        theme="light"
-                    />
-
                     <div className="review-right">
                         <div className="user-review-container">
                             {reviews.map((review, index) => <UserComment key={index} review={review} />)}
@@ -78,12 +68,14 @@ function Review(props) {
                         <div className="review-actions">
                             <button id="add-review" onClick={handleOpenWriteReview}>Viết đánh
                                 giá</button>
-                            <button id="see-all-reviews" data-toggle="modal" data-target="#all-review-modal">
+                            <button id="see-all-reviews" onClick={handleOpenAllReviews}>
                                 Xem tất cả đánh giá
                                 <i className="fa-solid fa-caret-right"></i>
                             </button>
                         </div>
                     </div>
+
+                    <AllReviews />
                 </div>
             </div>
         </div>

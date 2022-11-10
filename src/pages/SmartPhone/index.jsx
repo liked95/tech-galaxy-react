@@ -11,15 +11,24 @@ import FilterByRom from './FilterByRom'
 import FilterByPriceRange from './FilterByPriceRange'
 import Sort from './Sort';
 import { avgRating } from 'components/ProductItem/index';
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { useGetProductsQuery } from 'features/Products/products.service';
+import { openSideNav } from 'components/SideNav/sideNav.slice';
 
 function SmartPhone() {
   const location = useLocation()
   const navigate = useNavigate()
+  const dispatch = useDispatch()
   useGetProductsQuery()
 
-  let products = useSelector(state=>state.productList.products)
+  const [active, setActive] = useState(false)
+
+  const handleToggleSideFilter = () => {
+    setActive(!active)
+    
+  }
+
+  let products = useSelector(state => state.productList.products)
   products = products.filter(product => product.category == 'smartphone')
 
   const [filters, setFilters] = useState(() => {
@@ -40,7 +49,7 @@ function SmartPhone() {
   useEffect(() => {
     const params = queryString.parse(location.search,
       { arrayFormat: 'bracket' })
-    
+
     setFilters({
       brands: params.brands || [],
       rams: params.rams || [],
@@ -118,8 +127,8 @@ function SmartPhone() {
   // Bat dau loc theo tieu chi
   const startFilter = () => {
     let updatedProducts = [...products]
-    
-    
+
+
     if (filters.brands && filters.brands.length > 0) {
       updatedProducts = updatedProducts.filter(product => filters.brands.includes(product.brand))
     }
@@ -137,7 +146,7 @@ function SmartPhone() {
         // console.log(filters.roms)
         return filters.roms.some(r => {
           console.log(r);
-          return product.rom.includes(r+'GB')
+          return product.rom.includes(r + 'GB')
         })
       })
     }
@@ -167,14 +176,16 @@ function SmartPhone() {
 
   return (
     <section className="smartphone-container">
+      <div id="filter-btn__res" onClick={handleToggleSideFilter}>
+        <i class="fa-solid fa-filter"></i>
+      </div>
       <div className="container">
         <div className="breadcrumb"><Link to="/smartphone">Điện thoại</Link></div>
 
         <div className="row main-page-container">
-          <div className="filter-container">
+          <div className={`filter-container ${active ? 'mobile-active' : ''}`}>
             <h4>
               <span>bộ lọc tìm kiếm</span>
-              <span className="filter-expand-btn" id="arrow"><i className="fa-solid fa-chevron-down "></i></span>
               <span id="filter-sidebar-close"><i className="fa-solid fa-xmark"></i></span>
             </h4>
             <div className="tag-container">
@@ -193,7 +204,7 @@ function SmartPhone() {
             </div>
 
             <div className="filter-category-container">
-              <FilterByPriceRange onChangeMaxPrice={handleChangeMaxPrice} filters={filters}/>
+              <FilterByPriceRange onChangeMaxPrice={handleChangeMaxPrice} filters={filters} />
               <FilterByBrand onChangeBrands={handleChangeBrands} filters={filters} />
               <FilterByRam onChangeRams={handleChangeRams} filters={filters} />
               <FilterByRom onChangeRoms={handleChangeRoms} filters={filters} />
@@ -206,7 +217,7 @@ function SmartPhone() {
               <div className="product-length">
                 <p>Tìm thấy <b className="search-quantity">{renderedProducts.length}</b> sản phẩm </p>
               </div>
-             <Sort onChangeSort = {handleChangeSelectedSort} filters={filters}/>
+              <Sort onChangeSort={handleChangeSelectedSort} filters={filters} />
             </div>
             <div className="row product-category-container">
               {renderedProducts.length > 0 && renderedProducts.map((item, index) => <ProductItem key={index} props={item} />)}

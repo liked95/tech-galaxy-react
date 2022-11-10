@@ -6,6 +6,7 @@ const initialState = {
   status: "",
   products: [],
   isWriteReviewOpen: false,
+  isAllReviewsOpen: false,
 }
 
 const productSlice = createSlice({
@@ -14,6 +15,9 @@ const productSlice = createSlice({
   reducers: {
     toggleWriteReview(state) {
       state.isWriteReviewOpen = !state.isWriteReviewOpen
+    },
+    toggleAllReviews(state) {
+      state.isAllReviewsOpen = !state.isAllReviewsOpen
     }
   },
   extraReducers: (builder) => {
@@ -30,6 +34,6 @@ const productSlice = createSlice({
   }
 });
 
-export const { toggleWriteReview } = productSlice.actions
+export const { toggleWriteReview, toggleAllReviews } = productSlice.actions
 
 export default productSlice.reducer

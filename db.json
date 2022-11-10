@@ -77,6 +77,41 @@
       },
       "reviews": [
         {
+          "reviewer": "son",
+          "date": "10/11/2022",
+          "time": "09:42 AM",
+          "rating": 3,
+          "content": "Get out of this town"
+        },
+        {
+          "reviewer": "son",
+          "date": "10/11/2022",
+          "time": "09:37 AM",
+          "rating": 2,
+          "content": "jztroi"
+        },
+        {
+          "reviewer": "son",
+          "date": "10/11/2022",
+          "time": "09:22 AM",
+          "rating": 5,
+          "content": "Hay"
+        },
+        {
+          "reviewer": "Ẩn danh",
+          "date": "10/11/2022",
+          "time": "09:17 AM",
+          "rating": 3,
+          "content": "He said light, gét out of this town "
+        },
+        {
+          "reviewer": "Ẩn danh",
+          "date": "10/11/2022",
+          "time": "09:17 AM",
+          "rating": 3,
+          "content": "Good Job!"
+        },
+        {
           "reviewer": "ton",
           "date": "10/11/2022",
           "time": "12:06 AM",
@@ -588,6 +623,13 @@
         "Pin, Sạc": "3095 mAh, 20 W"
       },
       "reviews": [
+        {
+          "reviewer": "son",
+          "date": "10/11/2022",
+          "time": "11:17 AM",
+          "rating": 5,
+          "content": "Dien thoai xin"
+        },
         {
           "reviewer": "Nguyễn Thị Tiến",
           "date": "18-12-2021",
@@ -12546,9 +12588,9 @@
     {
       "productID": 1,
       "userId": 1,
-      "alterOption": "128GB",
+      "alterOption": 0,
       "color": "Vàng đồng",
-      "count": 2,
+      "count": 5,
       "name": "iPhone 13 Pro Max",
       "price": 28290000,
       "oldPrice": 33900000,
@@ -12561,7 +12603,7 @@
       "userId": 1,
       "alterOption": "1TB",
       "color": "Xanh dương",
-      "count": 3,
+      "count": 2,
       "name": "iPhone 13 Pro Max",
       "price": 40290000,
       "oldPrice": 47990000,
@@ -12581,6 +12623,19 @@
       "image": "xanh-la-iphone.jpg",
       "checked": true,
       "id": 22
+    },
+    {
+      "productID": 1,
+      "userId": 1,
+      "alterOption": "1TB",
+      "color": "Xám",
+      "count": 3,
+      "name": "iPhone 13 Pro Max",
+      "price": 40290000,
+      "oldPrice": 47990000,
+      "image": "iphone-13-pro-graphite-200x200.jpg",
+      "checked": true,
+      "id": 23
     }
   ],
   "history": [

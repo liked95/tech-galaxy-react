@@ -6,7 +6,7 @@ import { formatMoney } from 'utils/index';
 
 function FilterByPriceRange(props) {
     const [maxPrice, setMaxPrice] = useState([50000000])
-    const {onChangeMaxPrice, filters} = props
+    const { onChangeMaxPrice, filters } = props
 
     const handleChangeMaxPrice = price => {
         setMaxPrice([price])
@@ -21,6 +21,7 @@ function FilterByPriceRange(props) {
             </h4>
 
             <Range
+                className="price-range"
                 step={500000}
                 min={0}
                 max={50000000}
@@ -32,7 +33,7 @@ function FilterByPriceRange(props) {
                         style={{
                             ...props.style,
                             height: '6px',
-                            width: '100%',
+                            width: '95%',
                             backgroundColor: '#ccc'
                         }}
                     >

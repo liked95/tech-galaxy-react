@@ -1,37 +1,40 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 import { useDispatch } from 'react-redux'
-import { closeSideNav } from '../sideNav.slice'
+import { closeSideNav, toggleSideNav } from '../sideNav.slice'
+import { motion } from "framer-motion"
 
-function SmartphoneMenu() {
+function SmartphoneMenu({ category }) {
     const dispatch = useDispatch()
     const [isOpen, setIsOpen] = useState(false)
 
-    const style = {
-        display: isOpen ? "" : "block",
-    };
-
-    const toggleOpen = () => {
+    const handleToggle = () => {
         setIsOpen(!isOpen)
     }
-    const handleCloseSideNav = () => {
-        dispatch(closeSideNav())
-    }
+
 
     return (
         <li className="menu-item">
             <div className="sidebar-main-menu">
-                <Link to="/smartphone" onClick={handleCloseSideNav}>Điện thoại</Link>
-                <span className="arrow-container" onClick={toggleOpen}>
+                <Link to="/smartphone" onClick={()=> dispatch(toggleSideNav())}>{category}</Link>
+                <span className="arrow-container" onClick={handleToggle}>
                     <i className="fa-solid fa-chevron-right"></i>
                 </span>
             </div>
-            <ul className="sub-menu" style={style}>
-                <li className="sub-menu-item"><Link to="smartphone?brand=apple">Apple</Link></li>
-                <li className="sub-menu-item"><Link to="smartphone?brand=samsung">Samsung</Link></li>
-                <li className="sub-menu-item"><Link to="smartphone?brand=xiaomi">Xiaomi</Link></li>
-                <li className="sub-menu-item"><Link to="smartphone?brand=oppo">Oppo</Link></li>
-            </ul>
+
+            {isOpen &&
+                <motion.ul className="my-menu"
+                    whileHover={{ scale: 1.05 }}
+                    initial={{ opacity: 0, height: "0" }}
+                    animate={{ opacity: 1, height: "100%" }}
+                    exit={{ opacity: 0, height: "0" }}>
+                    <li className="sub-menu-item" onClick={()=> dispatch(toggleSideNav())}><Link to="smartphone?brand=apple">Apple</Link></li>
+                    <li className="sub-menu-item" onClick={()=> dispatch(toggleSideNav())}><Link to="smartphone?brand=samsung">Samsung</Link></li>
+                    <li className="sub-menu-item" onClick={()=> dispatch(toggleSideNav())}><Link to="smartphone?brand=xiaomi">Xiaomi</Link></li>
+                    <li className="sub-menu-item" onClick={()=> dispatch(toggleSideNav())}><Link to="smartphone?brand=oppo">Oppo</Link></li>
+                </motion.ul>
+            }
+
         </li>
     )
 }
