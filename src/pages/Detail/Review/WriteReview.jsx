@@ -31,11 +31,19 @@ function WriteReview() {
   useGetProductsQuery()
   const products = useSelector(state => state.productList.products)
   let product = products.find(p => p.id == id)
-  
+
 
   const handleClose = () => {
     dispatch(toggleWriteReview())
   }
+
+
+  const notify = () => {
+    toast.success("Success Notification !", {
+      position: toast.POSITION.BOTTOM_RIGHT
+    });
+    
+  };
 
   const handleSubmitReview = () => {
     if (!input.trim()) {
@@ -56,19 +64,16 @@ function WriteReview() {
     const updatedProduct = { ...product, reviews: updatedReviews }
 
 
-    notify()
+
     updateProduct(updatedProduct)
-    dispatch(toggleWriteReview())
-    
-  }
-
-
-  const notify = () => {
     toast.success("Success Notification !", {
       position: toast.POSITION.BOTTOM_RIGHT
     });
+    
+    dispatch(toggleWriteReview())
+  }
 
-  };
+
 
   return (
     <Modal show={show} onHide={handleClose}>
@@ -103,8 +108,10 @@ function WriteReview() {
             onChange={e => setInput(e.target.value)} value={input}></textarea>
         </div>
       </Modal.Body>
-
-      <ToastContainer className="toast-success"/>
+      <button onClick={notify}>Notify!</button>
+      <ToastContainer
+        className="toast-success"
+      />
 
 
       <Modal.Footer>
