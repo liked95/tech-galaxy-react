@@ -69,7 +69,6 @@ function Review(props) {
                         pauseOnHover
                         theme="light"
                     />
-                    <ToastContainer />
 
                     <div className="review-right">
                         <div className="user-review-container">
