@@ -4,8 +4,6 @@ import { Modal } from "react-bootstrap";
 
 import techGalaxy from "../../assets/images/header/TECH GALAXY.png";
 import TG from "../../assets/images/header/TG.ico";
-import magnifyingGlass from "../../assets/images/header/magnifying-glass.svg";
-import cancel from "../../assets/images/header/cancel.svg";
 import homePage from "../../assets/images/header/homepage.svg";
 import smartPhone from "../../assets/images/header/smartphone.svg";
 import laptop from "../../assets/images/header/laptop.svg";
@@ -23,6 +21,7 @@ import { useGetCartQuery } from "features/Cart/cart.service";
 import { useGetHistoryQuery } from "features/History/history.service";
 import { formatMoney } from "utils/index";
 import {openSideNav, turnBackDropOn} from "../SideNav/sideNav.slice"
+import Search from "./Search";
 
 function Header() {
   const dispatch = useDispatch()
@@ -87,22 +86,7 @@ function Header() {
             <img src={TG} alt="tech-galaxy" />
           </NavLink>
 
-          <div className="search-input">
-            <input type="text" placeholder="Tìm kiếm" />
-            <div className="glass-img">
-              <img
-                src={magnifyingGlass}
-                alt="magnify-glass"
-                className="magnify-glass filter-gray"
-              />
-              <img
-                src={cancel}
-                alt="cancel"
-                className="cancel-search-icon filter-gray"
-              />
-            </div>
-            <div id="search-result"></div>
-          </div>
+         <Search />
 
           {!auth && (<div className="login-logout">
             <Link className="login-btn" to="/login">
