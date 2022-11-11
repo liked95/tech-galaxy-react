@@ -1,11 +1,9 @@
 import React, { useContext } from "react";
-import iPadBanner from "../../assets/images/ipad_banner.png";
-import caseBanner from "../../assets/images/case-banner.png";
-import macbookBanner from "../../assets/images/macbook_banner.png";
 import Context from "context/index";
 import ProductItem from "components/ProductItem/index";
 import { useSelector } from "react-redux";
 import {useGetProductsQuery} from "features/Products/products.service"
+import Banner from "./Banner";
 
 function Home() {
   // const { products } = useContext(Context)
@@ -22,29 +20,7 @@ function Home() {
 
   return (
     <>
-      <section className="banner">
-        <div className="container-fluid">
-          <div className="banner-images owl-carousel">
-            <div className="banner-img">
-              <a href="promotion.html">
-                <img src={iPadBanner} alt="ipad_banner" />
-              </a>
-            </div>
-
-            <div className="banner-img">
-              <a href="promotion.html">
-                <img src={caseBanner} alt="case-banner" />
-              </a>
-            </div>
-
-            <div className="banner-img">
-              <a href="promotion.html">
-                <img src={macbookBanner} alt="macbook_banner" />
-              </a>
-            </div>
-          </div>
-        </div>
-      </section>
+      <Banner />
 
       <section className="top-sold-phones">
         <div className="container">

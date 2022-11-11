@@ -57,10 +57,10 @@ function ProductItem({ props }) {
             </div>
           </div>
 
-          <div className="bot-second" >
+          {/* <div className="bot-second" >
             <i className="fa-solid fa-circle-plus"></i>
             <p>So sánh</p>
-          </div>
+          </div> */}
         </div>
       </div>
     </div>

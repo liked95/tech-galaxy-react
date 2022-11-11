@@ -15,7 +15,7 @@ function Layout() {
       <Header />
       <Outlet />
       <Footer />
-      <Compare />
+      {/* <Compare /> */}
       <SideNav />
       <Backdrop />
       <WriteReview />
