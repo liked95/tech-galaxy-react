@@ -22,7 +22,7 @@ function AllReviews() {
     dispatch(toggleAllReviews())
   }
 
-  console.log(product.reviews.length);
+  // console.log(product.reviews.length);
 
   return (
     <Modal show={show} onHide={handleClose}>
