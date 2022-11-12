@@ -11,13 +11,14 @@ export function avgRating(reviews) {
 }
 
 
-function ProductItem({ props }) {
-  const { id, name, indexProductImgURL, features, currentPrices, oldPrices, alterOptions, discounts, soldQuantity, reviews } = props
+const ProductItem = React.forwardRef((prop, ref) => {
+  // console.log(ref);
+  const { id, name, indexProductImgURL, features, currentPrices, oldPrices, alterOptions, discounts, soldQuantity, reviews } = prop.props
   const [option, setOption] = useState(0)
 
 
   return (
-    <div className="product-card">
+    <div ref={ref} className="product-card">
       <Link to={`/detail?id=${id}`} className="product-image">
         <img src={process.env.PUBLIC_URL + `/publicImages/product-card-images/${indexProductImgURL}`} alt={indexProductImgURL} />
       </Link>
@@ -37,7 +38,7 @@ function ProductItem({ props }) {
 
         <div className="old-price-container">
           <span className="old-price">{formatMoney(oldPrices[option])}</span>
-          <span className="percent">{(((oldPrices[option] / currentPrices[option])-1)*100).toFixed(0)+'%'}</span>
+          <span className="percent">{(((oldPrices[option] / currentPrices[option]) - 1) * 100).toFixed(0) + '%'}</span>
         </div>
 
         <p className="current-price">{formatMoney(currentPrices[option])}</p>
@@ -65,6 +66,6 @@ function ProductItem({ props }) {
       </div>
     </div>
   )
-}
+})
 
 export default ProductItem

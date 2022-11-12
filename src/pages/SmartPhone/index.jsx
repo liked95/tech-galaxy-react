@@ -2,7 +2,7 @@ import Context from 'context/index'
 import React, { useContext, useEffect, useState } from 'react'
 import { useLocation, useNavigate, Link } from "react-router-dom";
 import queryString from "query-string";
-import {motion} from 'framer-motion'
+import { motion, AnimatePresence } from 'framer-motion'
 
 import ProductItem from 'components/ProductItem/index'
 import Tags from './Tags'
@@ -176,6 +176,9 @@ function SmartPhone() {
   const renderedProducts = startFilter()
 
 
+  const MotionProductItem = motion(ProductItem)
+
+
 
   return (
     <motion.section className="smartphone-container"
@@ -227,7 +230,14 @@ function SmartPhone() {
               <Sort onChangeSort={handleChangeSelectedSort} filters={filters} />
             </div>
             <div className="row product-category-container">
-              {renderedProducts.length > 0 && renderedProducts.map((item, index) => <ProductItem key={index} props={item} />)}
+              {renderedProducts.length > 0 && renderedProducts.map((item, index) => <MotionProductItem
+                key={index}
+                props={item}
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                exit={{ opacity: 0 }}
+                transition={{ duration: 0.5 }}
+              />)}
               {renderedProducts.length == 0 && <p>Không tìm thấy sản phẩm</p>}
             </div>
           </div>

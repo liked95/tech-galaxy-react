@@ -12597,26 +12597,13 @@
       "userId": 1,
       "alterOption": "128GB",
       "color": "Xanh lá",
-      "count": 1,
+      "count": 3,
       "name": "iPhone 13 Pro Max",
       "price": 28290000,
       "oldPrice": 33900000,
       "image": "xanh-la-iphone.jpg",
       "checked": true,
       "id": 19
-    },
-    {
-      "productID": 43,
-      "userId": 1,
-      "alterOption": "128GB",
-      "color": "Xanh lá",
-      "count": 3,
-      "name": "Galaxy Z Flip3",
-      "price": 14990000,
-      "oldPrice": 24990000,
-      "image": "samsung-galaxy-z-flip-3-green-1-200x200.jpg",
-      "checked": true,
-      "id": 20
     }
   ],
   "history": [
