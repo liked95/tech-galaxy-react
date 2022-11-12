@@ -1,14 +1,17 @@
 import Context from 'context/index'
+import { motion } from 'framer-motion'
+
 import { useCreateUserMutation, useGetUsersQuery } from 'features/Users/users.service'
 import React, { useState } from 'react'
 import { useSelector } from 'react-redux'
 import { Link } from 'react-router-dom'
+import { PAGE_TRANSITION_DURATION } from 'utils/index'
 
 
 function Register() {
     //rtk
     useGetUsersQuery()
-    const users = useSelector(state=>state.userList.users)
+    const users = useSelector(state => state.userList.users)
     const [createUser] = useCreateUserMutation()
 
     const [phone, setPhone] = useState('')
@@ -46,7 +49,7 @@ function Register() {
             setUserName('')
             setPasswordAlert('')
             setPassword('')
-            
+
             const newUser = {
                 name: userName,
                 phone,
@@ -59,7 +62,11 @@ function Register() {
 
 
     return (
-        <div className="register">
+        <motion.div
+            className="register"
+            initial={{ width: 0 }}
+            animate={{ width: "100%" }}
+            exit={{ x: window.innerWidth, transition: { duration: PAGE_TRANSITION_DURATION } }}>
             <div className="container">
                 <h4>Đăng kí</h4>
                 <div className="login-container">
@@ -88,7 +95,7 @@ function Register() {
                     </form>
                 </div>
             </div>
-        </div>
+        </motion.div>
     )
 }
 

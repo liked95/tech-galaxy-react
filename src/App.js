@@ -1,39 +1,27 @@
-import Layout from './components/Layout';
 import React from 'react';
-import { Route, Routes } from 'react-router-dom'
 import './App.css';
-import Home from 'pages/Home/index';
-import SmartPhone from 'pages/SmartPhone/index';
-import Detail from 'pages/Detail/index';
-import Cart from 'pages/Cart/index';
-import Register from 'pages/Register/index';
-import Login from 'pages/Login/index';
-import PrivateRoutes from 'components/private/PrivateRoutes';
+
+import Header from 'components/Header/index';
+import Footer from 'components/Footer/index';
+import SideNav from 'components/SideNav/index';
+import Backdrop from 'components/Backdrop/index';
+import WriteReview from 'pages/Detail/Review/WriteReview';
+import AnimatedRoutes from 'components/AnimatedRoutes/index';
 
 
 
 function App() {
 
-  
+
   return (
     <div className="App">
-      <Routes>
-        <Route path="/" element={<Layout />}>
+      <Header />
+      <AnimatedRoutes/>
+      <Footer />
 
-          <Route index element={<Home />} />
-          <Route path="/smartphone" element={<SmartPhone />} />
-          <Route path="/detail" element={<Detail />} />
-          <Route path="/register" element={<Register />} />
-          <Route path="/login" element={<Login />} />
-
-
-          <Route element={<PrivateRoutes />}>
-            <Route path="/cart" element={<Cart />} />
-          </Route>
-
-
-        </Route>
-      </Routes>
+      <SideNav />
+      <Backdrop />
+      <WriteReview />
     </div>
   );
 }

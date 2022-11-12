@@ -2,6 +2,7 @@ import Context from 'context/index'
 import React, { useContext, useEffect, useState } from 'react'
 import { useLocation, useNavigate, Link } from "react-router-dom";
 import queryString from "query-string";
+import {motion} from 'framer-motion'
 
 import ProductItem from 'components/ProductItem/index'
 import Tags from './Tags'
@@ -14,6 +15,7 @@ import { avgRating } from 'components/ProductItem/index';
 import { useDispatch, useSelector } from 'react-redux';
 import { useGetProductsQuery } from 'features/Products/products.service';
 import { openSideNav, toggleBackdrop, toggleFilter } from 'components/SideNav/sideNav.slice';
+import { PAGE_TRANSITION_DURATION } from 'utils/index';
 
 function SmartPhone() {
   const location = useLocation()
@@ -21,7 +23,7 @@ function SmartPhone() {
   const dispatch = useDispatch()
   useGetProductsQuery()
 
-  const active = useSelector(state=>state.sideNav.isFilterSideNavActive)
+  const active = useSelector(state => state.sideNav.isFilterSideNavActive)
 
   const handleToggleSideFilter = () => {
     dispatch(toggleFilter())
@@ -176,7 +178,11 @@ function SmartPhone() {
 
 
   return (
-    <section className="smartphone-container">
+    <motion.section className="smartphone-container"
+      initial={{ width: 0 }}
+      animate={{ width: "100%" }}
+      exit={{ x: window.innerWidth, transition: { duration: PAGE_TRANSITION_DURATION } }}
+    >
       <div id="filter-btn__res" onClick={handleToggleSideFilter}>
         <i class="fa-solid fa-filter"></i>
       </div>
@@ -227,7 +233,7 @@ function SmartPhone() {
           </div>
         </div>
       </div>
-    </section>
+    </motion.section>
   )
 }
 

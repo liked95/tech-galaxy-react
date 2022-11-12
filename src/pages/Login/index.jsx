@@ -2,10 +2,12 @@ import { useGetUsersQuery } from 'features/Users/users.service'
 import React, { useState, useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { Link, useNavigate } from 'react-router-dom'
+import { motion } from 'framer-motion'
 import { login } from 'features/Users/user.slice'
 
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import { PAGE_TRANSITION_DURATION } from 'utils/index'
 
 
 function Login() {
@@ -69,7 +71,11 @@ function Login() {
     };
 
     return (
-        <div className="login">
+        <motion.div
+            className="login"
+            initial={{ width: 0 }}
+            animate={{ width: "100%" }}
+            exit={{ x: window.innerWidth, transition: { duration: PAGE_TRANSITION_DURATION } }}>
             <div className="container">
                 <h4>Đăng nhập</h4>
                 <div className="login-container">
@@ -88,7 +94,7 @@ function Login() {
                     </form>
                 </div>
             </div>
-        </div>
+        </motion.div>
     )
 }
 
