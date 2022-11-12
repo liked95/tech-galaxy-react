@@ -32,6 +32,12 @@ function Search() {
         setInput("")
     }
 
+    const onKeyDown = (e) => {
+        if (e.keyCode == 9) {
+            console.log("Tab")
+        }
+    }
+
     const products = useSelector(state => state.productList.products)
 
     const renderedSearchProducts = products.filter(product => product.name.toLowerCase().includes(input.toLowerCase()))
@@ -65,6 +71,7 @@ function Search() {
                         className="search-item"
                         key={index}
                         onClick={resetSearch}
+                        onKeyDown={onKeyDown}
                     >
                         <p>{product.name}</p>
                     </Link>
