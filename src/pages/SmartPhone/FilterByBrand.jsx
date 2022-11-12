@@ -2,9 +2,10 @@ import React, { useState, useEffect } from 'react'
 import filterData from 'data/filterData'
 
 function FilterByBrand(props) {
-    const [brands, setBrands] = useState([])
+    // need to change useState to reflect update in the DOM
     const {onChangeBrands, filters} = props
-    // console.log(onChangeBrands)
+    const [brands, setBrands] = useState(filters.brands)
+    
 
     const handleChangeBrands = (brand) => {
         let updateBrands

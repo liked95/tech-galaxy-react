@@ -2,8 +2,8 @@ import React, { useState, useEffect } from 'react'
 import filterData from 'data/filterData'
 
 function FilterByRam(props) {
-    const [rams, setRams] = useState([])
     const { onChangeRams, filters } = props
+    const [rams, setRams] = useState(filters.rams)
 
     const handleChangeRams = ram => {
         let updateRams

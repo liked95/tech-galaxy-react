@@ -2,8 +2,8 @@ import React, {useState, useEffect} from 'react'
 import filterData from 'data/filterData'
 
 function FilterByRom(props) {
-    const [roms, setRoms] = useState([])
     const { onChangeRoms, filters } = props
+    const [roms, setRoms] = useState(filters.roms)
 
     const handleChangeRoms = rom => {
         let updateRoms

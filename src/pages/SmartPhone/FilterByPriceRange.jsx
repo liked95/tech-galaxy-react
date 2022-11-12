@@ -5,8 +5,11 @@ import { formatMoney } from 'utils/index';
 
 
 function FilterByPriceRange(props) {
-    const [maxPrice, setMaxPrice] = useState([50000000])
     const { onChangeMaxPrice, filters } = props
+
+    
+
+    const [maxPrice, setMaxPrice] = useState([50000000])
 
     const handleChangeMaxPrice = price => {
         setMaxPrice([price])

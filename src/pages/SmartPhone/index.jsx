@@ -129,7 +129,7 @@ function SmartPhone() {
   // Bat dau loc theo tieu chi
   const startFilter = () => {
     let updatedProducts = [...products]
-    console.log(updatedProducts)
+    // console.log(updatedProducts)
 
 
     if (filters.brands && filters.brands.length > 0) {
