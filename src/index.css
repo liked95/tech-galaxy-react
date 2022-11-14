@@ -323,6 +323,7 @@ header .first-header-row {
 .credential-container {
     position: relative;
     font-size: 14px;
+    z-index: 1000;
 }
 
 .avatar-image {
@@ -331,15 +332,16 @@ header .first-header-row {
     border-radius: 50%;
     border: 1px black;
     overflow: hidden;
+    cursor: pointer;
 }
 
 
-.credential-container:hover .dropdown-container {
+/* .credential-container:hover .dropdown-container {
     display: block;
-}
+} */
 
 .dropdown-container {
-    display: none;
+    display: block;
     position: absolute;
     top: 100%;
     right: 0;
@@ -371,7 +373,7 @@ header .first-header-row {
 }
 
 .arrow-up {
-    display: none;
+    display: block;
     --arrow-length: 8px;
     width: 0;
     height: 0;
@@ -381,9 +383,9 @@ header .first-header-row {
     transform: translateX(10px);
 }
 
-.credential-container:hover .arrow-up {
+/* .credential-container:hover .arrow-up {
     display: block;
-}
+} */
 
 .dropdown-menu-item {
     height: 100%;
@@ -421,11 +423,11 @@ header .second-header-row {
     height: 100%;
 }
 
-.second-header-row .menu-icon>a {
+.second-header-row .menu-icon>a,
+.second-header-row .menu-icon>div {
     text-decoration: none;
     color: #fff;
     transform: scale(.9);
-
 }
 
 .main-menu {
@@ -439,7 +441,7 @@ header .second-header-row {
 }
 
 .menu-icon {
-    padding: 0 15px;
+    /* padding: 0 15px; */
     position: relative;
     height: 100%;
     display: flex;
@@ -453,13 +455,14 @@ header .second-header-row {
     filter: invert(64%) sepia(64%) saturate(2016%) hue-rotate(359deg) brightness(102%) contrast(106%);
 }
 
-.menu-icon:hover>a {
+.menu-icon:hover>a,
+.menu-icon:hover>div {
     color: orange;
 }
 
-.menu-icon:hover .sub-menu {
+/* .menu-icon:hover .sub-menu {
     display: block;
-}
+} */
 
 .menu-icon>p {
     font-size: 12px;
@@ -467,9 +470,11 @@ header .second-header-row {
     margin-top: 5px;
 }
 
-.menu-icon>a {
+.menu-icon>a,
+.menu-icon>div {
     font-size: 12px;
     text-transform: uppercase;
+    user-select: none;
 }
 
 .icon-box {
@@ -497,15 +502,16 @@ header .second-header-row {
     margin-top: 5px;
 }
 
-.menu-icon a>p {
+.menu-icon a>p,
+.menu-icon div>p {
     font-size: 13px;
     text-transform: uppercase;
     /* margin-top: 4px; */
 }
 
 .menu-icon .sub-menu {
-    display: none;
-    /* display: block; */
+    /* display: none; */
+    display: block;
     position: absolute;
     top: 123%;
     left: 0;

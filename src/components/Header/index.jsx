@@ -20,8 +20,11 @@ import { useDispatch, useSelector } from "react-redux";
 import { useGetCartQuery } from "features/Cart/cart.service";
 import { useGetHistoryQuery } from "features/History/history.service";
 import { formatMoney } from "utils/index";
-import {openSideNav, turnBackDropOn} from "../SideNav/sideNav.slice"
+import { openSideNav, turnBackDropOn } from "../SideNav/sideNav.slice"
 import Search from "./Search";
+import { useEffect, useRef } from "react";
+import { AnimatePresence, motion } from "framer-motion";
+import MenuItem from "./MenuItem";
 
 function Header() {
   const dispatch = useDispatch()
@@ -32,7 +35,10 @@ function Header() {
 
   const handleShow = () => {
     setShow(true)
+    setShowAuth(false)
   }
+
+
 
 
   const auth = useSelector(state => state.userList.auth)
@@ -49,11 +55,11 @@ function Header() {
   }
 
   useGetHistoryQuery()
-  let historyItems=useSelector(state => state.history.purchases)
+  let historyItems = useSelector(state => state.history.purchases)
   if (auth) {
-    historyItems=historyItems.filter(item => item.userId == auth.id)
+    historyItems = historyItems.filter(item => item.userId == auth.id)
   } else {
-    historyItems=[]
+    historyItems = []
   }
   // console.log(historyItems)
 
@@ -69,6 +75,25 @@ function Header() {
     console.log("click");
 
   }
+
+  // menu khi click vao avatar
+  const [showAuth, setShowAuth] = useState(false)
+  const handleToggleAuth = () => {
+    setShowAuth(!showAuth)
+  }
+
+  const authMenuRef = useRef()
+
+  useEffect(() => {
+    const handleCloseAuthMenu = (e) => {
+      if (!authMenuRef.current?.contains(e.target)) {
+        setShowAuth(false)
+      }
+    }
+
+    document.addEventListener('click', handleCloseAuthMenu)
+    return () => document.removeEventListener('click', handleCloseAuthMenu)
+  }, [])
 
   return (
     <header>
@@ -86,7 +111,7 @@ function Header() {
             <img src={TG} alt="tech-galaxy" />
           </NavLink>
 
-         <Search />
+          <Search />
 
           {!auth && (<div className="login-logout">
             <Link className="login-btn" to="/login">
@@ -99,16 +124,26 @@ function Header() {
           </div>)}
 
           {auth && (
-            <div className='credential-container'>
-              <div className="avatar-image">
+            <div className='credential-container' ref={authMenuRef}>
+              <div className="avatar-image" onClick={handleToggleAuth}>
                 <img src={DefaultAvatar} alt="ava-default" />
               </div>
-              <div className="arrow-up"></div>
-              <ul className="dropdown-container">
-                <li>Xin chào <b>{auth.username}</b></li>
-                <li onClick={handleShow}>Lịch sử đặt hàng</li>
-                <li className="logout-btn" onClick={handleLogout}>Đăng xuất</li>
-              </ul>
+
+              {showAuth &&
+                <AnimatePresence>
+                  <motion.div
+                    initial={{ opacity: 0, y: "-100%", height: 0 }}
+                    animate={{ opacity: 1, y: 0, height: "100%" }}
+                    exit={{ opacity: 0, y: "-100%", height: 0 }}
+                  >
+                    <div className="arrow-up"></div>
+                    <ul className="dropdown-container">
+                      <li>Xin chào <b>{auth.username}</b></li>
+                      <li onClick={handleShow}>Lịch sử đặt hàng</li>
+                      <li className="logout-btn" onClick={handleLogout}>Đăng xuất</li>
+                    </ul>
+                  </motion.div>
+                </AnimatePresence>}
             </div>
           )}
 
@@ -131,77 +166,12 @@ function Header() {
               </NavLink>
             </li>
 
-            <li className="menu-icon">
-              <NavLink to="/smartphone">
-                <div className="icon-box">
-                  <img src={smartPhone} alt="phone" className="filter-white" />
-                  <i className="fa-solid fa-caret-down"></i>
-                </div>
-                <p>Điện thoại</p>
-                <ul className="sub-menu">
-                  <Link to="smartphone?brands[]=apple">
-                    <li className="sub-menu-item">iPhone</li>
-                  </Link>
-                  <Link to="smartphone?brands[]=samsung">
-                    <li className="sub-menu-item">Samsung</li>
-                  </Link>
-                  <Link to="smartphone?brands[]=xiaomi">
-                    <li className="sub-menu-item">Xiaomi</li>
-                  </Link>
-                  <Link to="smartphone?brands[]=oppo">
-                    <li className="sub-menu-item">Oppo</li>
-                  </Link>
-                </ul>
-              </NavLink>
-            </li>
+          
+            <MenuItem image={smartPhone} title = 'Điện thoại' />
+            <MenuItem image={tablet} title = 'Tablet' />
+            <MenuItem image={laptop} title = 'Laptop' />
 
-            <li className="menu-icon">
-              <NavLink to="/smartphone">
-                <div className="icon-box">
-                  <img src={tablet} alt="phone" className="filter-white" />
-                  <i className="fa-solid fa-caret-down"></i>
-                </div>
-                <p>máy tính bảng</p>
-                <ul className="sub-menu">
-                  <Link to="smartphone.html?brand=apple">
-                    <li className="sub-menu-item">iPad</li>
-                  </Link>
-                  <Link to="smartphone.html?brand=samsung">
-                    <li className="sub-menu-item">Samsung</li>
-                  </Link>
-                  <Link to="smartphone.html?brand=xiaomi">
-                    <li className="sub-menu-item">Xiaomi</li>
-                  </Link>
-                  <Link to="smartphone.html?brand=oppo">
-                    <li className="sub-menu-item">Oppo</li>
-                  </Link>
-                </ul>
-              </NavLink>
-            </li>
-
-            <li className="menu-icon">
-              <NavLink to="/smartphone">
-                <div className="icon-box">
-                  <img src={laptop} alt="phone" className="filter-white" />
-                  <i className="fa-solid fa-caret-down"></i>
-                </div>
-                <p>laptop</p>
-                <ul className="sub-menu">
-                  <Link to="smartphone.html?brand=apple">
-                    <li className="sub-menu-item">Macbook</li>
-                  </Link>
-                  <Link to="smartphone.html?brand=samsung">
-                    <li className="sub-menu-item">Samsung</li>
-                  </Link>
-                  <Link to="smartphone.html?brand=xiaomi">
-                    <li className="sub-menu-item">Xiaomi</li>
-                  </Link>
-                  <Link to="smartphone.html?brand=oppo">
-                    <li className="sub-menu-item">Oppo</li>
-                  </Link>
-                </ul>
-              </NavLink>
-            </li>
+           
 
             <li className="menu-icon">
               <NavLink to="/promotion">
@@ -236,7 +206,7 @@ function Header() {
           </ul>
         </div>
       </div>
-      
+
 
       <Modal show={show} onHide={handleClose}>
         <Modal.Header closeButton>
