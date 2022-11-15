@@ -8,6 +8,7 @@ import { motion } from 'framer-motion'
 import { useGetProductsQuery } from "features/Products/products.service"
 import Banner from "./Banner";
 import { PAGE_TRANSITION_DURATION } from "utils/index";
+import { useEffect } from "react";
 
 function Home() {
   // const { products } = useContext(Context)
@@ -16,6 +17,13 @@ function Home() {
   const smartphones = products.filter(p => p.category == "smartphone").sort((a, b) => b.soldQuantity - a.soldQuantity).slice(0, 10)
   const tablets = products.filter(p => p.category == "tablet")
   const laptops = products.filter(p => p.category == "laptop")
+
+  const start = new Date()
+
+  useEffect(() => {
+    let end = new Date()
+    console.log(end - start)
+  }, [products])
 
 
 
@@ -32,32 +40,32 @@ function Home() {
 
       <Banner />
 
-      <section className="top-sold-phones">
+      {products.length > 0 && <section className="top-sold-phones">
         <div className="container">
           <h3>SMARTPHONE BÁN CHẠY</h3>
           <div className="row">
             {smartphones.map((item, index) => <ProductItem key={index} props={item} />)}
           </div>
         </div>
-      </section>
+      </section>}
 
-      <section className="top-sold-tablets">
+      {products.length > 0 && <section className="top-sold-tablets">
         <div className="container">
           <h3>MÁY TÍNH BẢNG BÁN CHẠY</h3>
           <div className="row">
             {tablets.map((item, index) => <ProductItem key={index} props={item} />)}
           </div>
         </div>
-      </section>
+      </section>}
 
-      <section className="top-sold-laptops">
+      {products.length > 0 && <section className="top-sold-laptops">
         <div className="container">
           <h3>LAPTOP BÁN CHẠY</h3>
           <div className="row">
             {laptops.map((item, index) => <ProductItem key={index} props={item} />)}
           </div>
         </div>
-      </section>
+      </section>}
     </motion.div>
   );
 }
