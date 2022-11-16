@@ -1,15 +1,12 @@
 import React, { useContext, useState, useEffect } from "react";
 import Context from "context/index";
 import ProductItem from "components/ProductItem/index";
-
 import Banner from "./Banner";
 
 import { useSelector } from "react-redux";
 import { motion } from 'framer-motion'
-
-
-import { useGetProductsQuery } from "features/Products/products.service"
 import { PAGE_TRANSITION_DURATION } from "utils/index";
+import { useGetProductsQuery } from "features/Products/products.service"
 import Spinner from "components/Spinner/index";
 
 
