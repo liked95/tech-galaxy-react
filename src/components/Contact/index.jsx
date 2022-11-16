@@ -49,8 +49,9 @@ function Contact() {
                     <div className="map-container col-12 col-lg-6">
                         <iframe
                             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1457.0387693008847!2d105.80802366931648!3d20.99621093620442!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135ac96ec00978f%3A0x3cdc492e337c0044!2zMSDEkC4gTmd1eeG7hW4gVHLDo2ksIFRoxrDhu6NuZyDEkMOsbmgsIFRoYW5oIFh1w6JuLCBIw6AgTuG7mWksIFZpZXRuYW0!5e0!3m2!1sen!2s!4v1660035557005!5m2!1sen!2s"
-                            width="100%" height="100%" style={{ border: 0 }} allowfullscreen="" loading="lazy"
-                            referrerpolicy="no-referrer-when-downgrade"></iframe>
+                            width="100%" height="100%" style={{ border: 0 }} allowFullScreen="" loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
                     </div>
                 </div>
             </div>
