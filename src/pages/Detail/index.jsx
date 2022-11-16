@@ -11,6 +11,7 @@ import RelatedProducts from './RelatedProducts/index'
 import { useSelector } from 'react-redux'
 import { useGetProductsQuery } from 'features/Products/products.service'
 import { PAGE_TRANSITION_DURATION, scrollToTop } from 'utils/index'
+import Spinner from 'components/Spinner/index'
 
 function Detail() {
 
@@ -37,10 +38,11 @@ function Detail() {
                 initial={{ width: 0 }}
                 animate={{ width: "100%" }}
                 exit={{ x: window.innerWidth, transition: { duration: PAGE_TRANSITION_DURATION } }}>
-                <DetailHeading product={product} />
-                <ProductDetail product={product} />
-                <Review product={product} />
-                <RelatedProducts product={product} />
+                {status == "pending" && <Spinner />}
+                {status == "fulfilled" && <DetailHeading product={product} />}
+                {status == "fulfilled" && <ProductDetail product={product} />}
+                {status == "fulfilled" && <Review product={product} />}
+                {status == "fulfilled" && <RelatedProducts product={product} />}
             </motion.div>
         )
     }
