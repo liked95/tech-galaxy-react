@@ -44,7 +44,7 @@ function Home() {
         <div className="container">
           <h3>SMARTPHONE BÁN CHẠY</h3>
           <div className="row">
-            {smartphones.map((item, index) => <ProductItem.Loading key={index} props={item} status={status} />)}
+            {smartphones.map((item, index) => <ProductItem key={index} props={item} status={status} />)}
           </div>
         </div>
       </section>
