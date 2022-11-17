@@ -2,6 +2,7 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import techLogo from "../../assets/images/header/TECH GALAXY.png"
 import MenuItem from './MenuItem/MenuItem'
+
 import { useSelector, useDispatch } from 'react-redux'
 import { closeSideNav, turnBackDropOff } from './sideNav.slice'
 
@@ -9,6 +10,8 @@ import { closeSideNav, turnBackDropOff } from './sideNav.slice'
 
 
 function SideNav() {
+    const auth = useSelector(state => state.userList.auth)
+
     const dispatch = useDispatch()
     const isActive = useSelector(state => state.sideNav.isActive)
 
@@ -20,7 +23,7 @@ function SideNav() {
     return (
         <div id="side-nav-container" className={isActive ? "active" : ""}>
             <div className="side-nav-title">
-                <Link to="/" className="sidebar-logo">
+                <Link to="/" className="sidebar-logo" onClick={handleCloseSideNav}>
                     <img src={techLogo} alt={techLogo} />
                 </Link>
 
@@ -30,26 +33,42 @@ function SideNav() {
             </div>
 
             <ul className="side-menu">
+                <MenuItem />
+                <MenuItem category={"Điện thoại"} />
+                <MenuItem category={"Máy tính bảng"} />
+                <MenuItem category={"Laptop"} />
 
-                <MenuItem category={"Điện thoại"}/>
-                <MenuItem category={"Máy tính bảng"}/>
-                <MenuItem category={"Laptop"}/>
-               
                 <li className="menu-item">
                     <div className="sidebar-main-menu">
-                        <Link href="contact.html">Liên hệ</Link>
+                        <Link to="/promotion" onClick={handleCloseSideNav}>Khuyến mãi</Link>
+                    </div>
+                </li>
+
+                <li className="menu-item">
+                    <div className="sidebar-main-menu">
+                        <Link to="/about" onClick={handleCloseSideNav}>Về chúng tôi</Link>
+                    </div>
+                </li>
+
+                <li className="menu-item">
+                    <div className="sidebar-main-menu">
+                        <Link to="/contact" onClick={handleCloseSideNav}>Liên hệ</Link>
                     </div>
                 </li>
 
 
 
-                <li className="menu-item fst-italic" id="sidebar-login-logout">
+                {!auth && <li className="menu-item fst-italic" id="sidebar-login-logout">
                     <div className="sidebar-main-menu d-flex">
-                        <Link href="login.html">Đăng nhập</Link>
+                        <Link to="/login" onClick={handleCloseSideNav}>Đăng nhập</Link>
                         <span>/</span>
-                        <Link href="register.html">Đăng ký</Link>
+                        <Link to="register" onClick={handleCloseSideNav}>Đăng ký</Link>
                     </div>
-                </li>
+                </li>}
+
+
+
+
             </ul>
         </div>
     )

@@ -23,7 +23,7 @@ function CartAndTotal() {
         <div className="row">
           <div className="col-lg-8 cart-detail">
             <div className="cart-title">
-              <input type="checkbox" name="toggle-all" id="toggle-all" />
+              <input type="checkbox" name="toggle-all" id="toggle-all" style={{visibility: 'hidden'}}/>
               <div className="product">Sản phẩm</div>
               <div className="prices">Giá</div>
               <div className="quantity">Số lượng</div>

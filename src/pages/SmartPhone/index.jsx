@@ -40,7 +40,7 @@ function SmartPhone() {
       brands: params.brands || [],
       rams: params.rams || [],
       roms: params.roms || [],
-      maxPrice: params.maxPrice || [50000000],
+      maxPrice: params.maxPrice || 50000000,
       sort: params.sort || [],
     }
   })
@@ -56,7 +56,7 @@ function SmartPhone() {
       brands: params.brands || [],
       rams: params.rams || [],
       roms: params.roms || [],
-      maxPrice: params.maxPrice || [50000000],
+      maxPrice: params.maxPrice || 50000000,
       sort: params.sort || [],
     })
   }, [location.search])
@@ -120,6 +120,7 @@ function SmartPhone() {
       pathname: location.pathname,
       search: ''
     })
+    // resetMaxPrice()
   }
 
 
@@ -161,8 +162,6 @@ function SmartPhone() {
     if (filters.sort) {
       if (filters.sort == "priceAsc") updatedProducts = updatedProducts.sort((p1, p2) => p1.currentPrices[0] - p2.currentPrices[0])
       if (filters.sort == "priceDesc") updatedProducts = updatedProducts.sort((p1, p2) => p2.currentPrices[0] - p1.currentPrices[0])
-      if (filters.sort == "discountAsc") updatedProducts = updatedProducts.sort((p1, p2) => Math.abs(Number(p1.discounts[0])) - Math.abs(Number(p2.discounts[0])))
-      if (filters.sort == "discountDesc") updatedProducts = updatedProducts.sort((p1, p2) => Math.abs(Number(p2.discounts[0])) - Math.abs(Number(p1.discounts[0])))
       if (filters.sort == "quantityAsc") updatedProducts = updatedProducts.sort((p1, p2) => p1.soldQuantity - p2.soldQuantity)
       if (filters.sort == "quantityDesc") updatedProducts = updatedProducts.sort((p1, p2) => p2.soldQuantity - p1.soldQuantity)
       if (filters.sort == "ratingAsc") updatedProducts = updatedProducts.sort((p1, p2) => avgRating(p1.reviews) - avgRating(p2.reviews))

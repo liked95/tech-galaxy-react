@@ -77,6 +77,34 @@
       },
       "reviews": [
         {
+          "reviewer": "Ẩn danh",
+          "date": "17/11/2022",
+          "time": "08:48 PM",
+          "rating": 1,
+          "content": "Tks đdd"
+        },
+        {
+          "reviewer": "Ẩn danh",
+          "date": "17/11/2022",
+          "time": "08:48 PM",
+          "rating": 3,
+          "content": "Tks đ"
+        },
+        {
+          "reviewer": "Ẩn danh",
+          "date": "17/11/2022",
+          "time": "08:48 PM",
+          "rating": 3,
+          "content": "Tks"
+        },
+        {
+          "reviewer": "Ẩn danh",
+          "date": "17/11/2022",
+          "time": "08:47 PM",
+          "rating": 2,
+          "content": "Tks"
+        },
+        {
           "reviewer": "son",
           "date": "10/11/2022",
           "time": "09:42 AM",
@@ -3471,6 +3499,13 @@
         "Pin, Sạc": "5000mAh, 120W"
       },
       "reviews": [
+        {
+          "reviewer": "son",
+          "date": "17/11/2022",
+          "time": "08:45 PM",
+          "rating": 5,
+          "content": "11"
+        },
         {
           "reviewer": "Long",
           "date": "12-12-2021",

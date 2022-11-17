@@ -67,11 +67,11 @@ function WriteReview() {
 
     updateProduct(updatedProduct)
 
-    toast.success("Success Notification !", {
-      position: toast.POSITION.BOTTOM_RIGHT
-    });
     
     dispatch(toggleWriteReview())
+    setTimeout(() => {
+      alert("Cảm ơn bạn đã thêm đánh giá!")
+    }, 200);
   }
 
 

@@ -1,63 +1,107 @@
-import React, { useState } from 'react';
+// import React, { useState } from 'react';
+// import { Range } from 'react-range';
+// import { formatMoney } from 'utils/index';
+
+
+
+
+// function FilterByPriceRange(props) {
+//     const { onChangeMaxPrice, filters } = props
+
+
+
+//     const [maxPrice, setMaxPrice] = useState([50000000])
+
+//     const handleChangeMaxPrice = price => {
+//         setMaxPrice([price])
+//         onChangeMaxPrice(maxPrice)
+//     }
+
+//     // console.log(filters);
+//     return (
+//         <>
+//             <h4 className="filter-title">
+//                 giá
+//             </h4>
+
+//             <Range
+//                 className="price-range"
+//                 step={500000}
+//                 min={0}
+//                 max={50000000}
+//                 values={[+filters.maxPrice]}
+//                 onChange={price => handleChangeMaxPrice(price)}
+//                 renderTrack={({ props, children }) => (
+//                     <div
+//                         {...props}
+//                         style={{
+//                             ...props.style,
+//                             height: '6px',
+//                             width: '95%',
+//                             backgroundColor: '#ccc'
+//                         }}
+//                     >
+//                         {children}
+//                     </div>
+//                 )}
+//                 renderThumb={({ props }) => (
+//                     <div
+//                         {...props}
+//                         style={{
+//                             ...props.style,
+//                             height: '22px',
+//                             width: '22px',
+//                             borderRadius: '100%',
+//                             backgroundColor: 'blue'
+//                         }}
+//                     />
+//                 )}
+//             />
+
+//             <p className='price-range-indicator'>0-{formatMoney(+filters.maxPrice)}</p>
+//         </>
+//     );
+
+// }
+
+// export default FilterByPriceRange
+
+import React, { useState, useEffect } from 'react';
 import { Range } from 'react-range';
 import { formatMoney } from 'utils/index';
-
+import Slider from '@mui/material/Slider';
+import AttachMoneyIcon from '@mui/icons-material/AttachMoney';
 
 
 function FilterByPriceRange(props) {
     const { onChangeMaxPrice, filters } = props
 
-    
+    const [value, setValue] = useState(filters.maxPrice);
 
-    const [maxPrice, setMaxPrice] = useState([50000000])
+    // console.log(filters, value);
 
-    const handleChangeMaxPrice = price => {
-        setMaxPrice([price])
-        onChangeMaxPrice(maxPrice)
-    }
+    const handleChange = (event, newValue) => {
+        // console.log(newValue);
+        setValue(newValue);
+        onChangeMaxPrice(newValue)
+    };
+
+    useEffect(() => {
+        setValue(filters.maxPrice)
+    }, [filters.maxPrice])
 
     // console.log(filters);
     return (
         <>
-            <h4 className="filter-title">
-                giá
-            </h4>
-
-            <Range
-                className="price-range"
-                step={500000}
-                min={0}
+            <Slider aria-label="Volume"
+                min={10}
                 max={50000000}
-                values={[+filters.maxPrice]}
-                onChange={price => handleChangeMaxPrice(price)}
-                renderTrack={({ props, children }) => (
-                    <div
-                        {...props}
-                        style={{
-                            ...props.style,
-                            height: '6px',
-                            width: '95%',
-                            backgroundColor: '#ccc'
-                        }}
-                    >
-                        {children}
-                    </div>
-                )}
-                renderThumb={({ props }) => (
-                    <div
-                        {...props}
-                        style={{
-                            ...props.style,
-                            height: '22px',
-                            width: '22px',
-                            borderRadius: '100%',
-                            backgroundColor: 'blue'
-                        }}
-                    />
-                )}
-            />
+                value={value || 50000000}
+                onChange={handleChange} />
+            <p className='price-range-indicator'>
 
-            <p className='price-range-indicator'>0-{formatMoney(+filters.maxPrice)}</p>
+                <AttachMoneyIcon sx={{ fontSize: 20 }} />:
+                0-{formatMoney(+filters.maxPrice)}</p>
         </>
     );
 

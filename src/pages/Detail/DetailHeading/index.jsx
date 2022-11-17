@@ -7,8 +7,8 @@ function DetailHeading({product}) {
         <div className="detail-heading">
             <div className="container">
                 <div className="product-breadcrumb">
-                    <Link to={`/smartphone?brands[]=${product.brand}`} className="breadcrumb__brand">{product.brand.toUpperCase()}</Link>
-                    <i className="fa-solid fa-angle-right"></i>
+                    <Link to={`/smartphone?brands[]=${product.brand}`} className="breadcrumb__brand">{product.brand.toUpperCase()}</Link>&nbsp;
+                    <i className="fa-solid fa-angle-right"></i>&nbsp;
                     <Link to={`/detail?id=${product.id}`} className="breadcrumb__product">{product.name}</Link>
                 </div>
 

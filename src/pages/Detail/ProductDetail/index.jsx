@@ -208,7 +208,7 @@ function ProductDetail({ product }) {
                                 <p>Giảm giá 50% gói bảo hành mở rộng thêm 1 năm (chính hãng)</p>
                                 <p>Giảm đến 1,500,000đ khi Thu cũ Đổi mới (tùy model máy cũ;
                                     không áp dụng kèm giảm giá qua VNPAY, Moca)</p>
-                                <p>Giảm giá 25% iPad Pro M1 12.9" (khi mua kèm iPhone
+                                <p>Giảm giá 25% iPad Pro M1 12.9" khi mua kèm iPhone
                                     (Không áp dụng kèm khuyến mãi khác của iPad)</p>
                                 <p>Giảm 50% giá gói cước 1 năm (Vina350/Vina500) cho Sim
                                     VinaPhone trả sau (Trị giá đến 3 triệu)</p>

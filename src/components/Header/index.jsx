@@ -24,7 +24,7 @@ import { openSideNav, turnBackDropOn } from "../SideNav/sideNav.slice"
 import Search from "./Search";
 import { useEffect, useRef } from "react";
 import { AnimatePresence, motion } from "framer-motion";
-import MenuItem from "./MenuItem";
+import MenuItem from "./MenuItemComponent";
 
 function Header() {
   const dispatch = useDispatch()
