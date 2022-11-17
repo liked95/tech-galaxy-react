@@ -4399,3 +4399,7 @@ button.slick-arrow {
         padding: 5px;
     }
 }
+
+.date > i, .time > i {
+    color: #2f80ed
+}

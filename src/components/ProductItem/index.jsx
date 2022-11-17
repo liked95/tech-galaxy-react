@@ -52,7 +52,7 @@ const ProductItem = React.forwardRef((prop, ref) => {
         <div className="product-card-bottom">
           <div className="bot-first">
             <div className="rating">
-              <i className="fa-solid fa-star"></i>
+              <i className="fa-solid fa-star"></i>&nbsp;
               <span>{avgRating(reviews)}</span>
             </div>
             <div className="qtt-sold">

@@ -157,7 +157,7 @@ function ProductDetail({ product }) {
                                 <div className="price-info">
                                     <span className="new-price">
                                         {formatMoney(currentPrices[option])}
-                                    </span>
+                                    </span>&nbsp;
                                     <span className="old-price">
                                         {formatMoney(oldPrices[option])}
                                     </span>

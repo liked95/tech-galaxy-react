@@ -39,7 +39,7 @@ function Review(props) {
                         <div className="rating-box">
                             <span className="rating-count"><span>{reviews.length}</span> đánh giá</span>
                             <span className="rating-avg">
-                                <span>{avgRating(reviews)}</span>
+                                <span>{avgRating(reviews)}</span>&nbsp;
                                 <i className="fa-solid fa-star"></i></span>
                         </div>
 

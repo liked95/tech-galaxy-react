@@ -38,11 +38,11 @@ function AllReviews() {
                 <div className="user-rating">{review.userRatingContent}</div>
                 <div className="review-time">
                   <div className="date">
-                    <i className="fa-solid fa-calendar-days"></i>
+                    <i className="fa-solid fa-calendar-days"></i>&nbsp;
                     {review.date}
                   </div>
                   <div className="time">
-                    <i className="fa-solid fa-clock"></i>
+                    <i className="fa-solid fa-clock"></i>&nbsp;
                     {review.time}
                   </div>
                 </div>
