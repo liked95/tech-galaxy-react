@@ -17,6 +17,7 @@ function Detail() {
 
 
     const { status } = useGetProductsQuery()
+    console.log(status);
     let products = useSelector(state => state.productList.products)
 
     const location = useLocation()
@@ -30,6 +31,7 @@ function Detail() {
 
     const product = products.find(p => p.id == id)
 
+    if (status == 'pending') return <Spinner />
 
     if (status == 'fulfilled') {
         return (

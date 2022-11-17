@@ -187,7 +187,7 @@ function SmartPhone() {
       exit={{ x: window.innerWidth, transition: { duration: PAGE_TRANSITION_DURATION } }}
     >
       <div id="filter-btn__res" onClick={handleToggleSideFilter}>
-        <i class="fa-solid fa-filter"></i>
+        <i className="fa-solid fa-filter"></i>
       </div>
       <div className="container">
         <div className="breadcrumb"><Link to="/smartphone">Điện thoại</Link></div>

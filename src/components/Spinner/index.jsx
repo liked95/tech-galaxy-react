@@ -1,5 +1,5 @@
 import React from 'react'
-import FadeLoader from "react-spinners/FadeLoader";
+import RingLoader from "react-spinners/RingLoader";
 
 function Spinner() {
     const override = {
@@ -10,11 +10,11 @@ function Spinner() {
 
 
     return (
-        <FadeLoader
+        <RingLoader
             color={"#130325"}
             loading={true}
             cssOverride={override}
-            size={1000}
+            size={50}
             aria-label="Loading Spinner"
             data-testid="loader"
         />
