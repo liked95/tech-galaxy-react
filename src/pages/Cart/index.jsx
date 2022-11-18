@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import { motion } from 'framer-motion'
 
 import CartAndTotal from './CartAndTotal/index'
@@ -7,6 +7,10 @@ import { PAGE_TRANSITION_DURATION } from 'utils/index'
 
 
 function Cart() {
+
+  useEffect(() => {
+    document.title = 'Giỏ hàng'
+  }, [])
 
   return (
     <motion.div

@@ -30,12 +30,21 @@ function Detail() {
     }, [id]);
 
 
+
     const product = products.find(p => p.id == id)
+
+    useEffect(() => {
+        document.title = product?.name || ''
+    }, [])
+
+
     if (!product || !product.dotCarouselImages) {
         return (
-            <NotFound status={true}/>
+            <NotFound status={true} />
         )
     }
+
+    
 
     if (status == 'pending') return <Spinner />
 

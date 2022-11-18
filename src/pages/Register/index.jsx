@@ -2,7 +2,7 @@ import Context from 'context/index'
 import { motion } from 'framer-motion'
 
 import { useCreateUserMutation, useGetUsersQuery } from 'features/Users/users.service'
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import { useSelector } from 'react-redux'
 import { Link } from 'react-router-dom'
 import { PAGE_TRANSITION_DURATION } from 'utils/index'
@@ -10,6 +10,8 @@ import { PAGE_TRANSITION_DURATION } from 'utils/index'
 
 function Register() {
     //rtk
+
+
     useGetUsersQuery()
     const users = useSelector(state => state.userList.users)
     const [createUser] = useCreateUserMutation()
@@ -60,6 +62,9 @@ function Register() {
         }
     }
 
+    useEffect(() => {
+        document.title = 'Đăng ký'
+    }, [])
 
     return (
         <motion.div

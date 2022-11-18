@@ -140,6 +140,10 @@ function SmartPhone() {
   }
 
 
+  useEffect(() => {
+    document.title ='Điện thoại'
+  }, [])
+
 
 
 

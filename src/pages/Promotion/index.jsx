@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useEffect} from 'react'
 import { motion } from 'framer-motion'
 
 import zFold1 from '../../assets/images/promotion/z-fold3-1.jpg'
@@ -6,6 +6,10 @@ import zFold2 from '../../assets/images/promotion/z-fold3-2.jpg'
 import { PAGE_TRANSITION_DURATION } from 'utils/index'
 
 function Promotion() {
+
+    useEffect(() => {
+        document.title = 'Khuyến mãi'
+    }, [])
     return (
         <motion.div
             className="promotion"

@@ -21,7 +21,9 @@ function Home() {
 
 
 
-
+  useEffect(() => {
+    document.title ='Tech Galaxy React'
+  }, [])
 
 
   return (

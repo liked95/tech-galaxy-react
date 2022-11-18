@@ -1,10 +1,14 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import MapMaker from "../../assets/images/contact/mapmaker.svg"
 import Email from "../../assets/images/contact/email.svg"
 import Phone from "../../assets/images/contact/phone.svg"
 import { Link } from 'react-router-dom'
 
 function Contact() {
+
+    useEffect(() => {
+        document.title = 'Liên hệ'
+    }, [])
     return (
         <div className="contact">
             <div className="container">

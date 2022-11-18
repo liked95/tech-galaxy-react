@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useNavigate } from "react-router-dom";
 import NotFoundImg from "../../assets/images/contingency-images/404-not-found.webp"
 import RestoreIcon from '@mui/icons-material/Restore';
@@ -11,6 +11,10 @@ function NotFound({ status }) {
     const goBack = () => {
         navigate(-1)
     }
+
+    useEffect(() => {
+        document.title = '404'
+    }, [])
     return (
         <section className="not-found">
             <div className='container'>

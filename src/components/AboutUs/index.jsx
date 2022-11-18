@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { motion } from 'framer-motion'
 import { PAGE_TRANSITION_DURATION } from "utils/index";
 
@@ -6,6 +6,11 @@ import SmartPhone1 from '../../assets/images/about-us/smartphone1.jpg'
 import SmartPhone2 from '../../assets/images/about-us/smartphone2.jpg'
 
 function AboutUs() {
+
+    useEffect(() => {
+        document.title = 'Về chúng tôi'
+    }, [])
+
     return (
         <motion.div
             className="about-us"

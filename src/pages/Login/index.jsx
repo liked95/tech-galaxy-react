@@ -68,6 +68,10 @@ function Login() {
         setPasswordAlert('')
     }, [password]);
 
+    useEffect(() => {
+        document.title = 'Đăng nhập'
+    }, [])
+
 
     const notify = () => {
         toast.success("Success Notification !", {
