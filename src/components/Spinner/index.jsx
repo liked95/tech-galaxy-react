@@ -4,7 +4,7 @@ import RingLoader from "react-spinners/RingLoader";
 function Spinner() {
     const override = {
         display: "block",
-        margin: "400px auto",
+        margin: "250px auto",
         borderColor: "red",
     };
 
