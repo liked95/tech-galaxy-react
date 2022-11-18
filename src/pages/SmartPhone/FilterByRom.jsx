@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react'
+import React, { useState, useEffect } from 'react'
 import filterData from 'data/filterData'
 
 function FilterByRom(props) {
@@ -19,6 +19,10 @@ function FilterByRom(props) {
     useEffect(() => {
         onChangeRoms(roms)
     }, [roms]);
+
+    useEffect(() => {
+        setRoms(filters.roms)
+    }, [filters]);
 
 
     return (

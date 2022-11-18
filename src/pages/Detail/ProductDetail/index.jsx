@@ -18,7 +18,7 @@ function ProductDetail({ product }) {
     // console.log(product);
     const navigate = useNavigate()
     const auth = useSelector(state => state.userList.auth)
-    
+
 
     const [addToCart] = useAddToCartMutation()
     const [updateCartItemCount] = useUpdateCartItemCountMutation()
@@ -45,12 +45,12 @@ function ProductDetail({ product }) {
 
 
     const handleAddToCart = () => {
-        
+
         if (!auth) {
             navigate('/login')
             return;
         }
-        
+
         if (!color) {
             alert("Bạn cần chọn 1 màu!")
             return
@@ -173,7 +173,7 @@ function ProductDetail({ product }) {
 
                         <div className="quantity-and-cart">
                             <div className="change-quantity">
-                                <div className="value-button disabled" id="decrease" value="Decrease Value" onClick={handleCountDecrease}>-</div>
+                                <div className={`value-button ${count == 1 ? 'disabled' : ''}`} id="decrease" value="Decrease Value" onClick={handleCountDecrease}>-</div>
                                 <input type="number" id="number" value={count} onChange={e => setCount(e.target.valueAsNumber)} />
                                 <div className="value-button" id="increase" value="Increase Value" onClick={handleCountIncrease}>+</div>
                             </div>

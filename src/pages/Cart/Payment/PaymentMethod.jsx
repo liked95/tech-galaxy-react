@@ -6,7 +6,9 @@ import { Modal } from "react-bootstrap";
 import { formatMoney } from 'utils/index';
 import { useDispatch, useSelector } from 'react-redux';
 import { updateDiscount, updateVoucherCode } from 'features/Cart/cart.slice';
+import {useNavigate} from 'react-router-dom'
 function PaymentMethod() {
+    const navigate = useNavigate()
     const dispatch = useDispatch()
     const [addToHistory] = useAddToHistoryMutation()
     const [deleteItem] = useDeleteItemMutation()
@@ -109,10 +111,14 @@ function PaymentMethod() {
         }
 
         setShow(false)
-        alert("Mua thanh cong")
         dispatch(updateDiscount(0))
         dispatch(updateVoucherCode(""))
+        setTimeout(() => {
+            alert("Bạn đã mua hàng thành công")
+        }, 200);
     }
+
+    const handleGoBack = () => navigate(-1)
 
     return (
         <>
@@ -152,7 +158,7 @@ function PaymentMethod() {
                 </div>
 
                 <div className="payment-btn-area">
-                    <div className="go-back-btn">
+                    <div className="go-back-btn" onClick={handleGoBack}>
                         <span><i className="fa-solid fa-caret-left"></i></span>
                         Tiếp tục mua hàng
                     </div>

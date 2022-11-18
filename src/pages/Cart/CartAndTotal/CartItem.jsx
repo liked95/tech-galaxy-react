@@ -3,7 +3,6 @@ import { useDecreaseItemCountMutation, useDeleteItemMutation, useIncreaseItemCou
 import { useGetUsersQuery } from 'features/Users/users.service'
 import React, { useContext } from 'react'
 import { Link } from 'react-router-dom'
-import { decreaseCount, deleteCartItem, increaseCount, toggleChecked } from 'store/actions'
 import { formatMoney } from 'utils/index'
 import { useSelector } from '../../../../node_modules/react-redux/es/exports'
 
@@ -102,7 +101,7 @@ function CartItem({ item }) {
 
             <div className="quantity">
                 <div
-                    className="value-button"
+                    className={`value-button ${count==1 ? 'disabled' : ''}`}
                     id="decrease"
                     value="Decrease Value"
                     onClick={e => handleDecreaseCount(id)}

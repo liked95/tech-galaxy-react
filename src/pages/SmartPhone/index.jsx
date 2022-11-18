@@ -121,7 +121,14 @@ function SmartPhone() {
       pathname: location.pathname,
       search: ''
     })
-    // resetMaxPrice()
+
+    setFilters({
+      brands: [],
+      rams: [],
+      roms: [],
+      maxPrice: 50000000,
+      sort: [],
+    })
   }
 
 

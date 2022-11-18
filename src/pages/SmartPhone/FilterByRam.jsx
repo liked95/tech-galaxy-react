@@ -20,6 +20,10 @@ function FilterByRam(props) {
         onChangeRams(rams)
     }, [rams]);
 
+    useEffect(() => {
+        setRams(filters.rams)
+    }, [filters]);
+
     return (
         <div className="filter-category">
             <h4 className="filter-title">

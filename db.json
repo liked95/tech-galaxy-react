@@ -2137,6 +2137,13 @@
       },
       "reviews": [
         {
+          "reviewer": "son",
+          "date": "18/11/2022",
+          "time": "10:55 AM",
+          "rating": 5,
+          "content": "Hayyy"
+        },
+        {
           "reviewer": "Nguyễn Như Thành",
           "date": "28-9-2021",
           "time": "8:33PM",
@@ -12628,17 +12635,30 @@
       "id": 18
     },
     {
-      "productID": 1,
+      "productID": 42,
       "userId": 1,
-      "alterOption": "128GB",
-      "color": "Xanh lá",
+      "alterOption": "256GB",
+      "color": "Bạc",
       "count": 1,
-      "name": "iPhone 13 Pro Max",
-      "price": 28290000,
-      "oldPrice": 33900000,
-      "image": "xanh-la-iphone.jpg",
+      "name": "Galaxy Z Fold3",
+      "price": 31990000,
+      "oldPrice": 41990000,
+      "image": "samsung-galaxy-z-fold-3-silver-1-200x200.jpg",
+      "checked": false,
+      "id": 21
+    },
+    {
+      "productID": 42,
+      "userId": 1,
+      "alterOption": "256GB",
+      "color": "Xanh rêu",
+      "count": 1,
+      "name": "Galaxy Z Fold3",
+      "price": 31990000,
+      "oldPrice": 41990000,
+      "image": "samsung-galaxy-z-fold-3-green-1-200x200.jpg",
       "checked": true,
-      "id": 19
+      "id": 22
     }
   ],
   "history": [
@@ -13161,6 +13181,168 @@
       "date": "8/11/2022",
       "hour": "02:42 PM",
       "id": 13
+    },
+    {
+      "items": [
+        {
+          "productID": 2,
+          "userId": 1,
+          "alterOption": "128GB",
+          "color": "Xanh lá",
+          "count": 2,
+          "name": "iPhone 13 Pro",
+          "price": 26390000,
+          "oldPrice": 30990000,
+          "image": "xanh-la-iphone.jpg",
+          "checked": true,
+          "id": 20
+        },
+        {
+          "productID": 42,
+          "userId": 1,
+          "alterOption": "256GB",
+          "color": "Bạc",
+          "count": 1,
+          "name": "Galaxy Z Fold3",
+          "price": 31990000,
+          "oldPrice": 41990000,
+          "image": "samsung-galaxy-z-fold-3-silver-1-200x200.jpg",
+          "checked": true,
+          "id": 21
+        }
+      ],
+      "userId": 1,
+      "customerName": "Vu Hoai Son",
+      "customerPhone": "0386639002",
+      "customerAddress": "32/262 Khuong Dinh, Thanh Xuan",
+      "province": "Lào Cai",
+      "district": "Huyện Mường Khương",
+      "ward": "Xã Thanh Bình",
+      "totalValue": 84770000,
+      "shippingFee": 102000,
+      "discount": -4000000,
+      "pretaxValue": 80872000,
+      "tax": 6469760,
+      "grandTotal": 87341760,
+      "paymentValue": "Chuyển khoản ngân hàng",
+      "date": "18/11/2022",
+      "hour": "10:46 AM",
+      "id": 14
+    },
+    {
+      "items": [
+        {
+          "productID": 3,
+          "userId": 1,
+          "alterOption": "128GB",
+          "color": "Trắng",
+          "count": 1,
+          "name": "iPhone 13",
+          "price": 20390000,
+          "oldPrice": 24990000,
+          "image": "iphone-13-starlight-1-200x200.jpg",
+          "checked": true,
+          "id": 19
+        }
+      ],
+      "userId": 1,
+      "customerName": "Vu Hoai Son",
+      "customerPhone": "0386639002",
+      "customerAddress": "32/262 Khuong Dinh, Thanh Xuan, Hanoi",
+      "province": "Hậu Giang",
+      "district": "Thị xã Long Mỹ",
+      "ward": "Xã Long Trị",
+      "totalValue": 20390000,
+      "shippingFee": 29000,
+      "discount": -2039000,
+      "pretaxValue": 18380000,
+      "tax": 1470400,
+      "grandTotal": 19850400,
+      "paymentValue": "Chuyển khoản ngân hàng",
+      "date": "18/11/2022",
+      "hour": "10:50 AM",
+      "id": 15
+    },
+    {
+      "items": [
+        {
+          "productID": 3,
+          "userId": 1,
+          "alterOption": "128GB",
+          "color": "Trắng",
+          "count": 1,
+          "name": "iPhone 13",
+          "price": 20390000,
+          "oldPrice": 24990000,
+          "image": "iphone-13-starlight-1-200x200.jpg",
+          "checked": true,
+          "id": 19
+        }
+      ],
+      "userId": 1,
+      "customerName": "Vu Hoai Son",
+      "customerPhone": "0386639002",
+      "customerAddress": "32/262 Khuong Dinh, Thanh Xuan, Hanoi",
+      "province": "Bắc Ninh",
+      "district": "Huyện Tiên Du",
+      "ward": "Xã Lạc Vệ",
+      "totalValue": 20390000,
+      "shippingFee": 29000,
+      "discount": 0,
+      "pretaxValue": 20419000,
+      "tax": 1633520,
+      "grandTotal": 22052520,
+      "paymentValue": "Bằng tiền mặt khi giao hàng",
+      "date": "18/11/2022",
+      "hour": "10:54 AM",
+      "id": 16
+    },
+    {
+      "items": [
+        {
+          "productID": 44,
+          "userId": 1,
+          "alterOption": "512GB",
+          "color": "Trắng",
+          "count": 3,
+          "name": "OPPO Find X5 Pro",
+          "price": 37590000,
+          "oldPrice": 38990000,
+          "image": "oppo-find-x5-pro-trang-thumb-1-200x200.jpg",
+          "checked": true,
+          "id": 20
+        },
+        {
+          "productID": 3,
+          "userId": 1,
+          "alterOption": "512GB",
+          "color": "Xanh dương",
+          "count": 3,
+          "name": "iPhone 13",
+          "price": 26490000,
+          "oldPrice": 32490000,
+          "image": "iphone-13-blue-1-200x200.jpg",
+          "checked": true,
+          "id": 22
+        }
+      ],
+      "userId": 1,
+      "customerName": "Vu Hoai Son",
+      "customerPhone": "0386639002",
+      "customerAddress": "40/4/4 Vạn Xuân, phường Tân Thành",
+      "province": "Bắc Ninh",
+      "district": "Huyện Tiên Du",
+      "ward": "Xã Đại Đồng",
+      "totalValue": 192240000,
+      "shippingFee": 174000,
+      "discount": -1500000,
+      "pretaxValue": 190914000,
+      "tax": 15273120,
+      "grandTotal": 206187120,
+      "paymentValue": "Chuyển khoản ngân hàng",
+      "date": "18/11/2022",
+      "hour": "10:56 AM",
+      "id": 17
     }
   ]
 }

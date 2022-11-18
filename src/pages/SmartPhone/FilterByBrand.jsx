@@ -5,6 +5,7 @@ function FilterByBrand(props) {
     // need to change useState to reflect update in the DOM
     const {onChangeBrands, filters} = props
     const [brands, setBrands] = useState(filters.brands)
+    // console.log(filters.brands, brands);
     
 
     const handleChangeBrands = (brand) => {
@@ -21,6 +22,10 @@ function FilterByBrand(props) {
     useEffect(() => {
         onChangeBrands(brands)
     }, [brands]);
+
+    useEffect(() => {
+        setBrands(filters.brands)
+    }, [filters]);
     
 
 
