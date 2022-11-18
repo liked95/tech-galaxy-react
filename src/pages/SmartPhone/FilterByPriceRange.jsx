@@ -104,7 +104,11 @@ function FilterByPriceRange(props) {
                 max={50000000}
                 value={value || 50000000}
                 onChange={handleChange}
-                onChangeCommitted={handleChangeCommitted} />
+                onChangeCommitted={handleChangeCommitted}
+                style={{ width: '93%' }}
+            />
+
+
             <p className='price-range-indicator'>
 
                 <AttachMoneyIcon sx={{ fontSize: 20 }} />:
