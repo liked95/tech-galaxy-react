@@ -2668,6 +2668,13 @@
       },
       "reviews": [
         {
+          "reviewer": "son",
+          "date": "18/11/2022",
+          "time": "08:20 PM",
+          "rating": 1,
+          "content": "GGG"
+        },
+        {
           "reviewer": "Nông Đức Mạnh",
           "date": "24-12-2021",
           "time": "6:26AM",
@@ -12644,7 +12651,7 @@
       "price": 31990000,
       "oldPrice": 41990000,
       "image": "samsung-galaxy-z-fold-3-silver-1-200x200.jpg",
-      "checked": false,
+      "checked": true,
       "id": 21
     },
     {

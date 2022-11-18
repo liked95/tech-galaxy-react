@@ -77,7 +77,7 @@ function WriteReview() {
 
 
   return (
-    <Modal show={show} onHide={handleClose}>
+    <Modal show={show} onHide={handleClose} centered>
       <Modal.Header closeButton>
         <Modal.Title>Thêm đánh giá cho sản phẩm</Modal.Title>
       </Modal.Header>

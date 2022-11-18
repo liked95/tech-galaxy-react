@@ -4,12 +4,13 @@ import cancel from "../../assets/images/header/cancel.svg";
 import anya from "../../assets/images/contingency-images/anya-shock.gif"
 
 import { useSelector } from 'react-redux';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link, useNavigate, useLocation } from 'react-router-dom';
 
 
 
 
 function Search() {
+    const location = useLocation()
     const navigate = useNavigate()
     const [input, setInput] = useState("")
     const [focused, setFocused] = useState(false)
@@ -84,6 +85,17 @@ function Search() {
             document.removeEventListener('keydown', handleKeyDownSearch)
         }
     }, [])
+
+    useEffect(() => {
+        console.log(location.search);
+    }, [location.search])
+
+    useEffect(() => {
+        setInput("")
+    }, [location.search])
+
+
+
 
 
     const products = useSelector(state => state.productList.products)

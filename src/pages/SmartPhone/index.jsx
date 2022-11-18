@@ -4,6 +4,9 @@ import { useLocation, useNavigate, Link } from "react-router-dom";
 import queryString from "query-string";
 import { motion, AnimatePresence } from 'framer-motion'
 import Button from '@mui/material/Button';
+import CloseIcon from '@mui/icons-material/Close';
+import RestartAltIcon from '@mui/icons-material/RestartAlt';
+import FilterAltRoundedIcon from '@mui/icons-material/FilterAltRounded';
 
 import ProductItem from 'components/ProductItem/index'
 import Tags from './Tags'
@@ -27,6 +30,11 @@ function SmartPhone() {
   const active = useSelector(state => state.sideNav.isFilterSideNavActive)
 
   const handleToggleSideFilter = () => {
+    dispatch(toggleFilter())
+    dispatch(toggleBackdrop())
+  }
+
+  const handleCloseSideFilter = () => {
     dispatch(toggleFilter())
     dispatch(toggleBackdrop())
   }
@@ -194,7 +202,7 @@ function SmartPhone() {
       exit={{ x: window.innerWidth, transition: { duration: PAGE_TRANSITION_DURATION } }}
     >
       <div id="filter-btn__res" onClick={handleToggleSideFilter}>
-        <i className="fa-solid fa-filter"></i>
+       <FilterAltRoundedIcon fontSize='large'/>
       </div>
       <div className="container">
         <div className="breadcrumb"><Link to="/smartphone">Điện thoại</Link></div>
@@ -203,7 +211,9 @@ function SmartPhone() {
           <div className={`filter-container ${active ? 'mobile-active' : ''}`}>
             <h4>
               <span>bộ lọc tìm kiếm</span>
-              <span id="filter-sidebar-close"><i className="fa-solid fa-xmark"></i></span>
+              <span id="filter-sidebar-close" onClick={handleCloseSideFilter}>
+                <CloseIcon />
+              </span>
             </h4>
             <Button className="erase-tag-btn"
               onClick={handleResetFilter}
@@ -216,7 +226,7 @@ function SmartPhone() {
                 marginBottom: '15px'
               }}
             >
-              <i className="fa-solid fa-eraser"></i>
+              <i className="fa-solid fa-eraser"></i>&nbsp;
               Đặt lại bộ lọc
             </Button>
 

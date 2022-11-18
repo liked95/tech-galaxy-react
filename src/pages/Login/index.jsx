@@ -11,18 +11,24 @@ import { PAGE_TRANSITION_DURATION } from 'utils/index'
 
 
 function Login() {
+    const navigate = useNavigate()
+    const dispatch = useDispatch()
+    const auth = useSelector(state => state.userList.auth)
+
+
 
     useGetUsersQuery()
     const users = useSelector(state => state.userList.users)
 
-    const navigate = useNavigate()
-    const dispatch = useDispatch()
+
 
     const [userName, setUserName] = useState('')
     const [userNameAlert, setUserNameAlert] = useState('')
 
     const [password, setPassword] = useState('')
     const [passwordAlert, setPasswordAlert] = useState('')
+
+
 
     const handleLoginSubmit = (e) => {
         e.preventDefault()
@@ -69,6 +75,11 @@ function Login() {
         });
 
     };
+
+    if (auth) {
+        navigate("/")
+        return
+    }
 
     return (
         <motion.div
