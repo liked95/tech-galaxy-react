@@ -157,7 +157,7 @@ function SmartPhone() {
       updatedProducts = updatedProducts.filter(product => {
         // console.log(filters.roms)
         return filters.roms.some(r => {
-          console.log(r);
+          // console.log(r);
           return product.rom.includes(r + 'GB')
         })
       })

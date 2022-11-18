@@ -8,8 +8,8 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    /* outline: 1px solid limegreen !important;
-    background: rgb(0 100 0 / 0.1) !important; */
+    /* outline: 1px solid limegreen !important; */
+    background: rgb(0 100 0 / 0.1) !important;
 }
 
 
@@ -1218,6 +1218,14 @@ footer p {
 
 .slick-slide .product-card {
     height: 100%;
+}
+
+.slick-next {
+    right: 0;
+}
+
+.slick-prev {
+    left: 0;
 }
 
 
