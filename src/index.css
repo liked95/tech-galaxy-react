@@ -1221,8 +1221,8 @@ footer p {
 }
 
 .slick-next, .slick-prev {
-    width: 40px;
-    height: 40px;
+    width: 30px;
+    height: 30px;
 
 }
 
@@ -1236,8 +1236,8 @@ footer p {
 }
 
 .slick-next:before, .slick-prev:before {
-    font-size: 40px;
-    color: red;
+    font-size: 30px;
+    color: #666;
 }
 
 
