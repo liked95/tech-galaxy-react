@@ -66,7 +66,7 @@
 
 // export default FilterByPriceRange
 
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { Range } from 'react-range';
 import { formatMoney } from 'utils/index';
 import Slider from '@mui/material/Slider';
@@ -74,34 +74,41 @@ import AttachMoneyIcon from '@mui/icons-material/AttachMoney';
 
 
 function FilterByPriceRange(props) {
+    const sliderRef = useRef(null)
     const { onChangeMaxPrice, filters } = props
 
-    const [value, setValue] = useState(filters.maxPrice);
+    const [value, setValue] = useState(+filters.maxPrice);
 
     // console.log(filters, value);
 
     const handleChange = (event, newValue) => {
-        // console.log(newValue);
         setValue(newValue);
-        onChangeMaxPrice(newValue)
     };
 
+    const handleChangeCommitted = (event, newValue) => {
+        console.log(newValue)
+        onChangeMaxPrice(newValue)
+    }
+
     useEffect(() => {
-        setValue(filters.maxPrice)
-    }, [filters.maxPrice])
+        setValue(+filters.maxPrice)
+    }, [filters])
+
 
     // console.log(filters);
     return (
         <>
             <Slider aria-label="Volume"
+                ref={sliderRef}
                 min={10}
                 max={50000000}
                 value={value || 50000000}
-                onChange={handleChange} />
+                onChange={handleChange}
+                onChangeCommitted={handleChangeCommitted} />
             <p className='price-range-indicator'>
 
                 <AttachMoneyIcon sx={{ fontSize: 20 }} />:
-                0-{formatMoney(+filters.maxPrice)}</p>
+                0-{formatMoney(value)}</p>
         </>
     );
 
