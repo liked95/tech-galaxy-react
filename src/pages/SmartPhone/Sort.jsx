@@ -16,7 +16,7 @@ function Sort(props) {
 
     return (
         <div className="sort-container">
-            <label htmlFor="sort">Sắp xếp theo:</label>
+            <label htmlFor="sort">Sắp xếp theo:</label>&nbsp;
             <select name="sort" id="sort" value={filters.sort} onChange={e => handleChangeSortCriteria(e.target.value)}>
                 <option value="" selected disabled hidden className="disabled">Tiêu chí...</option>
                 {sortData.map((sort, index) => (

@@ -70,10 +70,18 @@ function Search() {
             }
         }
 
+        const handleKeyDownSearch = (e) => {
+            if (e.keyCode == 191) {
+                inputRef.current.focus()
+            }
+        }
+
         document.addEventListener('click', handleClickOutside)
+        document.addEventListener('keydown', handleKeyDownSearch)
 
         return () => {
             document.removeEventListener('click', handleClickOutside)
+            document.removeEventListener('keydown', handleKeyDownSearch)
         }
     }, [])
 
@@ -84,7 +92,7 @@ function Search() {
     // console.log(renderedSearchProducts);
 
     return (
-        <div className="search-input">
+        <div className={`search-input ${focused && input ? 'active' : ''}`}>
 
             <input type="text" placeholder="Tìm kiếm"
                 ref={inputRef}
@@ -107,7 +115,7 @@ function Search() {
                     onClick={handleCancelSearch}
                 />}
             </div>
-            <div id="search-result" ref={searchResultRef}>
+            <div id="search-result" ref={searchResultRef} className={`${focused && input ? 'active' : ''}`}>
                 {focused && input && renderedSearchProducts.length > 0 && renderedSearchProducts.map((product, index) => (
                     <Link
                         to={`detail?id=${product.id}`}

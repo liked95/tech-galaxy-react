@@ -1,6 +1,6 @@
 import React from 'react'
 import { Route, Routes, useLocation } from 'react-router-dom'
-import {AnimatePresence} from 'framer-motion'
+import { AnimatePresence } from 'framer-motion'
 
 import Home from 'pages/Home/index';
 import SmartPhone from 'pages/SmartPhone/index';
@@ -12,6 +12,7 @@ import PrivateRoutes from 'components/private/PrivateRoutes';
 import Promotion from 'pages/Promotion/index';
 import AboutUs from 'components/AboutUs/index';
 import Contact from 'components/Contact/index';
+import NotFound from 'pages/NotFound/index';
 
 function AnimatedRoutes() {
   const location = useLocation()
@@ -36,6 +37,8 @@ function AnimatedRoutes() {
         <Route element={<PrivateRoutes />}>
           <Route path="/cart" element={<Cart />} />
         </Route>
+
+        <Route path="*" element={<NotFound />}></Route>
       </Routes>
     </AnimatePresence>
   )

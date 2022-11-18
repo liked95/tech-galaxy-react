@@ -212,6 +212,8 @@ header .first-header-row {
 .search-input {
     position: relative;
     width: 700px;
+    display: flex;
+    align-items: center;
 }
 
 .search-input input {
@@ -223,9 +225,14 @@ header .first-header-row {
     padding-right: 45px;
 }
 
-.search-input:has(input:focus) {
-    border: 2px solid #6bbbf7;
+.search-input input:focus {
+    border: 1px solid #6bbbf7;
     border-radius: 6px;
+}
+
+.search-input.active input {
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
 }
 
 
@@ -237,10 +244,10 @@ header .first-header-row {
 
 .glass-img {
     position: absolute;
-    top: 0px;
-    right: 0px;
+    top: 10%;
+    right: 2px;
     padding: 0px 10px;
-    height: 100%;
+    height: 80%;
     font-size: 24px;
     color: #333;
     background: #fff;
@@ -272,6 +279,11 @@ header .first-header-row {
     border-radius: 0 0 6px 6px;
     overflow: auto;
     box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}
+
+#search-result.active {
+    border: 1px solid #6bbbf7;
+    border-top-color: #ddd
 }
 
 

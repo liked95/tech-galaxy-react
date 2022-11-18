@@ -5,6 +5,7 @@ import { closeSideNav, toggleSideNav, turnBackDropOff } from '../sideNav.slice'
 import defaultAvatar from '../../../assets/images/contingency-images/default-avatar.png'
 import { motion } from "framer-motion"
 import { logout } from "features/Users/user.slice"
+import { togglePurchaseHistory } from 'features/History/history.slice'
 
 function SmartphoneMenu({ category }) {
     const auth = useSelector(state => state.userList.auth)
@@ -23,6 +24,11 @@ function SmartphoneMenu({ category }) {
     const handleLogout = () => {
         localStorage.setItem('auth', null)
         dispatch(logout())
+        handleCloseSideNavAndBackdrop()
+    }
+
+    const handleToggleHistory = () => {
+        dispatch(togglePurchaseHistory())
         handleCloseSideNavAndBackdrop()
     }
 
@@ -78,7 +84,7 @@ function SmartphoneMenu({ category }) {
                         animate={{ opacity: 1, height: "100%", display: 'block', overflow: 'hidden' }}
                         exit={{ opacity: 0, height: "0" }}
                         transition={{ duration: 0.3 }}>
-                        <li className="sub-menu-item" id="side-bar-history" >Lịch
+                        <li className="sub-menu-item" id="side-bar-history" onClick={handleToggleHistory}>Lịch
                             sử đặt hàng</li>
                         <li className="sub-menu-item logout-btn" onClick={handleLogout}>Đăng xuất</li>
                     </motion.ul>

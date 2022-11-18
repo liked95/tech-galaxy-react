@@ -5,12 +5,17 @@ import { historyApi } from './history.service';
 const initialState = {
   status: "",
   purchases: [],
+  isPurchaseHistoryOpen: false
 }
 
 const historySlice = createSlice({
   name: "history",
   initialState,
-  reducers: {},
+  reducers: {
+    togglePurchaseHistory(state) {
+      state.isPurchaseHistoryOpen = !state.isPurchaseHistoryOpen
+    }
+  },
   extraReducers: (builder) => {
     builder.addMatcher(historyApi.endpoints.getHistory.matchFulfilled, (state, action) => {
       state.purchases = action.payload
@@ -22,6 +27,6 @@ const historySlice = createSlice({
   }
 });
 
-export const { } = historySlice.actions
+export const { togglePurchaseHistory } = historySlice.actions
 
 export default historySlice.reducer

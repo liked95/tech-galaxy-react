@@ -12,6 +12,7 @@ import { useSelector } from 'react-redux'
 import { useGetProductsQuery } from 'features/Products/products.service'
 import { PAGE_TRANSITION_DURATION, scrollToTop } from 'utils/index'
 import Spinner from 'components/Spinner/index'
+import NotFound from 'pages/NotFound/index'
 
 function Detail() {
 
@@ -30,6 +31,11 @@ function Detail() {
 
 
     const product = products.find(p => p.id == id)
+    if (!product || !product.dotCarouselImages) {
+        return (
+            <NotFound status={true}/>
+        )
+    }
 
     if (status == 'pending') return <Spinner />
 

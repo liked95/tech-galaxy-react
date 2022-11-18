@@ -25,16 +25,17 @@ import Search from "./Search";
 import { useEffect, useRef } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import MenuItem from "./MenuItemComponent";
+import { togglePurchaseHistory } from "features/History/history.slice";
 
 function Header() {
   const dispatch = useDispatch()
-  const [show, setShow] = useState(false);
+  const show = useSelector(state=>state.history.isPurchaseHistoryOpen)
   const handleClose = () => {
-    setShow(false)
+    dispatch(togglePurchaseHistory())
   }
 
   const handleShow = () => {
-    setShow(true)
+    dispatch(togglePurchaseHistory())
     setShowAuth(false)
   }
 
@@ -217,11 +218,11 @@ function Header() {
             <div className="history-item mb-3" key={index}>
               <div className="payment-time d-flex">
                 <div className="history-date">
-                  <i className="fa-solid fa-calendar-days"></i>
+                  <i className="fa-solid fa-calendar-days"></i>&nbsp;
                   {purchase.date}
                 </div>
                 <div className="history-time">
-                  <i className="fa-solid fa-clock"></i>
+                  <i className="fa-solid fa-clock"></i>&nbsp;
                   {purchase.hour}
                 </div>
               </div>

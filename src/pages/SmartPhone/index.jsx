@@ -3,6 +3,7 @@ import React, { useContext, useEffect, useState } from 'react'
 import { useLocation, useNavigate, Link } from "react-router-dom";
 import queryString from "query-string";
 import { motion, AnimatePresence } from 'framer-motion'
+import Button from '@mui/material/Button';
 
 import ProductItem from 'components/ProductItem/index'
 import Tags from './Tags'
@@ -197,20 +198,20 @@ function SmartPhone() {
               <span>bộ lọc tìm kiếm</span>
               <span id="filter-sidebar-close"><i className="fa-solid fa-xmark"></i></span>
             </h4>
-            <div className="tag-container">
-              {/* <Tags /> */}
-
-              <div className="function-btn">
-                {/* <div className="filter-btn" onClick={startFilter}>
-                  <i className="fa-solid fa-filter"></i>
-                  lọc
-                </div> */}
-                <div className="erase-tag-btn" onClick={handleResetFilter} >
-                  <i className="fa-solid fa-eraser"></i>
-                  Đặt lại bộ lọc
-                </div>
-              </div>
-            </div>
+            <Button className="erase-tag-btn"
+              onClick={handleResetFilter}
+              style={{
+                color: '#ffffff',
+                backgroundColor: "#2e7d32",
+                margin: '0 auto',
+                display: "flex",
+                width: '100%',
+                marginBottom: '15px'
+              }}
+            >
+              <i className="fa-solid fa-eraser"></i>
+              Đặt lại bộ lọc
+            </Button>
 
             <div className="filter-category-container">
               <FilterByPriceRange onChangeMaxPrice={handleChangeMaxPrice} filters={filters} />
