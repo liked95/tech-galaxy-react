@@ -73,7 +73,7 @@ function Header() {
   const handleOpenSideNav = () => {
     dispatch(openSideNav())
     dispatch(turnBackDropOn())
-    console.log("click");
+    // console.log("click");
 
   }
 

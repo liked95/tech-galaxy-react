@@ -81,7 +81,7 @@ const cartReducer = (state, action) => {
 
         case DELETE_CART_ITEM: {
             const { userId, productID, alterOption, color } = action.payload
-            console.log(action.payload);
+            // console.log(action.payload);
             newState = [...state].filter(item => 
                 item.userId != userId ||
                 item.productID != productID ||

@@ -103,7 +103,7 @@ function Login() {
                         <p className="password-noti">{passwordAlert}</p>
                         <button id="start-login-btn" onClick={handleLoginSubmit}>Đăng nhập</button>
                         <p className="register-prompt">
-                            Chưa có tài khoản?
+                            Chưa có tài khoản?&nbsp;
                             <Link to="/register">Đăng kí</Link>
                         </p>
                     </form>

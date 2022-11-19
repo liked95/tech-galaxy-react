@@ -12640,32 +12640,6 @@
       "image": "samsung-galaxy-z-fold-3-green-1-200x200.jpg",
       "checked": false,
       "id": 18
-    },
-    {
-      "productID": 42,
-      "userId": 1,
-      "alterOption": "256GB",
-      "color": "Bạc",
-      "count": 1,
-      "name": "Galaxy Z Fold3",
-      "price": 31990000,
-      "oldPrice": 41990000,
-      "image": "samsung-galaxy-z-fold-3-silver-1-200x200.jpg",
-      "checked": true,
-      "id": 21
-    },
-    {
-      "productID": 42,
-      "userId": 1,
-      "alterOption": "256GB",
-      "color": "Xanh rêu",
-      "count": 1,
-      "name": "Galaxy Z Fold3",
-      "price": 31990000,
-      "oldPrice": 41990000,
-      "image": "samsung-galaxy-z-fold-3-green-1-200x200.jpg",
-      "checked": true,
-      "id": 22
     }
   ],
   "history": [
@@ -13350,6 +13324,66 @@
       "date": "18/11/2022",
       "hour": "10:56 AM",
       "id": 17
+    },
+    {
+      "items": [
+        {
+          "productID": 42,
+          "userId": 1,
+          "alterOption": "256GB",
+          "color": "Xanh rêu",
+          "count": 1,
+          "name": "Galaxy Z Fold3",
+          "price": 31990000,
+          "oldPrice": 41990000,
+          "image": "samsung-galaxy-z-fold-3-green-1-200x200.jpg",
+          "checked": true,
+          "id": 22
+        },
+        {
+          "productID": 40,
+          "userId": 1,
+          "alterOption": "64GB",
+          "color": "Cam",
+          "count": 1,
+          "name": "Xiaomi Redmi 9C",
+          "price": 2999000,
+          "oldPrice": 3590000,
+          "image": "xiaomi-redmi-9c-3gb-cam-200x200.jpg",
+          "checked": true,
+          "id": 23
+        },
+        {
+          "productID": 40,
+          "userId": 1,
+          "alterOption": "128GB",
+          "color": "Xám",
+          "count": 4,
+          "name": "Xiaomi Redmi 9C",
+          "price": 3350000,
+          "oldPrice": 3490000,
+          "image": "xiaomi-redmi-9c-3gb-xam-200x200.jpg",
+          "checked": true,
+          "id": 24
+        }
+      ],
+      "userId": 1,
+      "customerName": "Vu Hoai Son",
+      "customerPhone": "0386639002",
+      "customerAddress": "32/262 Khương Đình",
+      "province": "Bạc Liêu",
+      "district": "Thị Xã Giá Rai",
+      "ward": "Xã Phong Thạnh Đông",
+      "totalValue": 48389000,
+      "shippingFee": 234006,
+      "discount": -4000000,
+      "pretaxValue": 44623006,
+      "tax": 3569840.48,
+      "grandTotal": 48192846.480000004,
+      "paymentValue": "Bằng tiền mặt khi giao hàng",
+      "date": "19/11/2022",
+      "hour": "08:20 AM",
+      "id": 18
     }
   ]
 }

@@ -14,7 +14,7 @@ const userSlice = createSlice({
     initialState,
     reducers: {
         login(state, action) {
-            console.log(action);
+            // console.log(action);
             state.auth = action.payload
             localStorage.setItem('auth', JSON.stringify(action.payload))
         },
@@ -25,7 +25,7 @@ const userSlice = createSlice({
     },
     extraReducers: (builder) => {
         builder.addMatcher(userApi.endpoints.getUsers.matchFulfilled, (state, action) => {
-            console.log(action);
+            // console.log(action);
             state.users = action.payload
         })
 

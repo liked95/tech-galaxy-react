@@ -94,7 +94,7 @@ function Register() {
                             onClick={e => handleSubmitRegister(e)}
                         >Tạo tài khoản</button>
                         <p className="register-prompt">
-                            Đã có tài khoản?
+                            Đã có tài khoản?&nbsp;
                             <Link to="/login">Đăng nhập</Link>
                         </p>
                     </form>

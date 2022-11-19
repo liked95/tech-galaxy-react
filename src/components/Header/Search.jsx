@@ -87,7 +87,7 @@ function Search() {
     }, [])
 
     useEffect(() => {
-        console.log(location.search);
+        // console.log(location.search);
     }, [location.search])
 
     useEffect(() => {

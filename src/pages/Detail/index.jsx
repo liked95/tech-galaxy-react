@@ -18,7 +18,7 @@ function Detail() {
 
 
     const { status } = useGetProductsQuery()
-    console.log(status);
+    // console.log(status);
     let products = useSelector(state => state.productList.products)
 
     const location = useLocation()

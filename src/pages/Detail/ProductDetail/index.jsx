@@ -80,8 +80,8 @@ function ProductDetail({ product }) {
             && p.color == newCartItem.color)
 
 
-        console.log(cartItems);
-        console.log('exist la', isExist);
+        // console.log(cartItems);
+        // console.log('exist la', isExist);
 
         if (!isExist) {
             // nếu chưa tồn tại thì add mới vào cart
